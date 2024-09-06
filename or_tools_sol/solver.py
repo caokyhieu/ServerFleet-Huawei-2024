@@ -9,6 +9,7 @@ import uuid
 import json
 from utils import save_solution
 from collections import deque
+import numpy as np
 MILLIONS = 100000
 class VarArraySolutionPrinter(cp_model.CpSolverSolutionCallback):
     """Print intermediate solutions."""
@@ -51,7 +52,7 @@ class ServerFleetSolver:
 
         self.variables = {}
         ## new  variables
-        self.binary_lifespan_variables = {}
+        self.binary_action_variables = {}
 
     
     def check_release_time(self,server_generation, time_step):
@@ -65,7 +66,9 @@ class ServerFleetSolver:
         release_time = self.servers[self.servers.server_generation==server_generation].release_time.values[0]
         if time_step < release_time[0]:
             return 0
-        elif time_step >= release_time[0] and time_step <= release_time[1]:
+        elif time_step == release_time[0]:
+            return 3
+        elif time_step > release_time[0] and time_step <= release_time[1]:
             return 1
         else:
             return 2
@@ -88,6 +91,7 @@ class ServerFleetSolver:
 
         actions = self.actions
         for ts in time_steps:
+            self.binary_action_variables[ts] = {}
             self.variables[ts] = {}
             for server in servers:
                 ## check the release time of the server
@@ -95,29 +99,43 @@ class ServerFleetSolver:
                 if check_release_time == 0:
                     ## do nothing
                     continue
-                elif check_release_time == 1:
+                elif check_release_time == 3:
+                    ## just can do buy
+                    self.binary_action_variables[ts][server] = {}
                     self.variables[ts][server] = {}
                     for dc in datacenters:
+                        self.binary_action_variables[ts][server][dc] = {}
                         self.variables[ts][server][dc] = {}
-                        if ts==1:
-                            action = 'buy'
+                        action = 'buy'
+                        self.binary_action_variables[ts][server][dc][action] = self.model.NewBoolVar(f"{ts}_{server}_{dc}_{action}_is_not_zero")
+                        self.model.Add(self.binary_action_variables[ts][server][dc][action]==True)
+                        self.variables[ts][server][dc][action] = self.model.NewIntVar(0, self.max_server_buying, f"x_{ts}_{server}_{dc}_{action}")
+                elif check_release_time == 1:
+                    self.binary_action_variables[ts][server] = {}
+                    self.variables[ts][server] = {}
+                    for dc in datacenters:
+                        self.binary_action_variables[ts][server][dc] = {}
+                        self.variables[ts][server][dc] = {}
+                        for action in actions:
                             self.variables[ts][server][dc][action] = self.model.NewIntVar(0, self.max_server_buying, f"x_{ts}_{server}_{dc}_{action}")
-                        else:
-                            for action in actions:
-                                self.variables[ts][server][dc][action] = self.model.NewIntVar(0, self.max_server_buying, f"x_{ts}_{server}_{dc}_{action}")
+                            self.binary_action_variables[ts][server][dc][action] = self.model.NewBoolVar(f"{ts}_{server}_{dc}_{action}_is_not_zero")
                 else:
                     ## can not buy that server, but for other action is ok
                     self.variables[ts][server] = {}
+                    self.binary_action_variables[ts][server] = {}
                     for dc in datacenters:
                         self.variables[ts][server][dc] = {}
+                        self.binary_action_variables[ts][server][dc] = {}
                         for action in actions:
                             if action == 'buy':
                                 continue
                             else:
                                 self.variables[ts][server][dc][action] = self.model.NewIntVar(0, self.max_server_buying, f"x_{ts}_{server}_{dc}_{action}")
+                                self.binary_action_variables[ts][server][dc][action] = self.model.NewBoolVar(f"{ts}_{server}_{dc}_{action}_is_not_zero")
             ## flatten the dictionary, seperate by "_"
 
             self.variables = pd.json_normalize(self.variables, sep='_').to_dict(orient='records')[0]
+            self.binary_action_variables = pd.json_normalize(self.binary_action_variables, sep='_').to_dict(orient='records')[0]
 
         pass
 
@@ -161,8 +179,6 @@ class ServerFleetSolver:
                 results.append(0)
         return results
 
-    
-    
 
     def create_auxillary_variables(self):
         """
@@ -173,65 +189,54 @@ class ServerFleetSolver:
         time_steps = self.demand.time_step.unique()
         servers = self.servers.server_generation
         datacenters = self.datacenters.datacenter_id
+        self.dict_alive_servers = {}
         self.dict_life_span = {}
         for server in servers:
+            self.dict_alive_servers[server] = {}
             self.dict_life_span[server] = {}
             for dc in datacenters:
-                buying_steps = self.get_timestep_buying_server(server, dc)
+                
                 buying_variables = self.get_buying_servers(server, dc)
                 dismiss_variables = self.get_dismiss_servers(server, dc)
-                ## start buying:
-                start_time = buying_steps[0] - 1
-                ## buying
-                buying_variables = buying_variables[start_time:]
-                ## dismiss
-                dismiss_variables = dismiss_variables[start_time:]
-
-                actual_time_step = len(time_steps) - start_time 
-                assert(actual_time_step==len(buying_variables)), f'wrong steps, {len(buying_variables)}!= {actual_time_step}'
-
                 # Initialize variables for life span tracking
-                life_span = [self.model.NewIntVar(0, 10000 * MILLIONS, f'life_span_{t}_{server}_{dc}') for t in range(actual_time_step)]
+                life_span = [0 for _ in range(len(time_steps))]
 
-                
                 # This matrix will store the remaining servers from each buy at each timestep
-                remaining_servers = [[self.model.NewIntVar(0, 100 * MILLIONS, f'remaining_servers_{i}_{t}_{server}_{dc}') for t in range(actual_time_step)] for i in range(actual_time_step)]
+                remaining_servers = [[0 for t in range(len(time_steps))] for i in range(len(time_steps))]
+                true_remaining_servers = [[self.model.NewIntVar(0, 100 * self.max_server_buying, f"remain_servers_{server}_{dc}_{i}_{j}") for j in range(len(time_steps)) ]for i in range(len(time_steps))]
+                
+                negative_indicator = []
+                for i in range(len(time_steps)):
+                    row_indicator = [self.model.NewBoolVar(f"negative_indicator_{i}_{j}") for j in range(len(time_steps))]
+                    ## add consecutive constraints
+                    for j in range(1,len(time_steps) ):
+                        self.model.Add(row_indicator[j - 1] <= row_indicator[j])
+                    negative_indicator.append(row_indicator)
+                
+                    
                 # Initialize constraints
-                for t in range(actual_time_step):
-                    if t == 0:
-                        # At t = 0, we only have the initial buy, no dismissals yet
-                        self.model.Add(remaining_servers[0][t] == buying_variables[0])
-                        for i in range(1, actual_time_step):
-                            self.model.Add(remaining_servers[i][t] == 0)
-                    else:
-                        # Update remaining servers by considering buys and dismissals
-                        for i in range(actual_time_step):
-                            if i == t:
-                                # New buy at this timestep, initialize remaining_servers
-                                self.model.Add(remaining_servers[i][t] == buying_variables[t])
-                            else:
-                                # Calculate remaining servers by subtracting the dismissals
-                                if t == i + 1:
-                                    # First timestep after buy, subtract any dismissals
-                                    self.model.Add(remaining_servers[i][t] == remaining_servers[i][t-1] - dismiss_variables[t-1])
-                                elif t > i + 1:
-                                    # Subsequent timesteps, just track remaining
-                                    self.model.Add(remaining_servers[i][t] == remaining_servers[i][t-1])
-                                    
-                                # Ensure that servers dismissed are not negative
-                                self.model.Add(remaining_servers[i][t] >= 0)
-
-                    # Calculate the total life span at each timestep
-                    self.model.Add(life_span[t] == sum((remaining_servers[i][t] * max(t - i + 1,0)) for i in range(actual_time_step)))
-                ## augment the life_span arr to the length of time step
-                aug_life_span = [0] * start_time  + life_span
-
-                self.dict_life_span[server][dc] = aug_life_span
+                for i in range(len(remaining_servers)):
+                    for j in range(len(remaining_servers)):
+                        if i == j:
+                            remaining_servers[i][j] = buying_variables[i]
+                            self.model.Add( negative_indicator[i][j] == 0)
+                        elif i>j:
+                            remaining_servers[i][j] = 0
+                            self.model.Add( negative_indicator[i][j] == 0)
+                        else:
+                            remaining_servers[i][j] = remaining_servers[i][j-1] - dismiss_variables[j]
+                            self.model.Add( remaining_servers[i][j] < 0).OnlyEnforceIf(negative_indicator[i][j])
+                            self.model.Add( remaining_servers[i][j] >=0 ).OnlyEnforceIf(negative_indicator[i][j].Not())
+                        temp_var = self.model.NewIntVar(0, 100* self.max_server_buying,f"temp_var_{server}_{dc}_{i}_{j}")
+                        self.model.Add(temp_var==remaining_servers[i][j])
+                        self.model.AddMultiplicationEquality(true_remaining_servers[i][j],negative_indicator[i][j], temp_var )
+                    for row in range(i+1):
+                        life_span[i] += true_remaining_servers[row][i] * (1 + i - row)               
+                self.dict_life_span[server][dc] = life_span
+                self.dict_alive_servers[server][dc] = true_remaining_servers
         pass
 
         
-    
-    
     def get_accum_deployed_server_variables(self,ts,server,dc):
         "Return accumulated server variables"
         results = 0
@@ -252,16 +257,6 @@ class ServerFleetSolver:
         return results
         
 
-    def create_time_interval(self):
-        """Create a time interval for each time step."""
-        time_steps = self.demand.time_step.unique()
-        # pdb.set_trace()
-        ## create interval for each time step
-        self.intervals = []
-        for ts in time_steps:
-            interval = self.model.NewIntervalVar(1, ts-1, ts, f"interval_{ts}")
-            self.intervals.append(interval)
-        pass
         
 
     def check_variables_exist(self,ts,server,dc,action):
@@ -281,7 +276,15 @@ class ServerFleetSolver:
         keys = f"{ts}_{server}_{dc}_{action}"
         return self.variables[keys]
     
-    
+    def get_binary_action_variable(self,ts,server,dc, action):
+        """
+        Methods to get  binary variable
+        """
+        keys = f"{ts}_{server}_{dc}_{action}"
+        if keys in self.binary_action_variables.keys():
+            return self.binary_action_variables[keys]
+        else:
+            raise ValueError(f"Variable {keys} does not exist")
 
     def add_datacenters_capacity_constraint(self):
         """
@@ -314,18 +317,18 @@ class ServerFleetSolver:
                             ## get both variables
                             buy_var = self.get_variables(_t,s,dc,'buy')
                             dismiss_var = self.get_variables(_t,s,dc,'dismiss')
-                            buy_var_is_zero = self.model.NewBoolVar(f"buy_var_is_zero_{_t}_{s}_{dc}")
-                            dismiss_var_is_zero = self.model.NewBoolVar(f"dismiss_var_is_zero_{_t}_{s}_{dc}")
+                            buy_var_is_not_zero = self.get_binary_action_variable(_t,s,dc,'buy')
+                            dismiss_var_is_not_zero = self.get_binary_action_variable(_t,s,dc,'dismiss')
 
                             #Link the boolean variables with the integer variables
-                            self.model.Add(buy_var == 0).OnlyEnforceIf(buy_var_is_zero)
-                            self.model.Add(buy_var != 0).OnlyEnforceIf(buy_var_is_zero.Not())
+                            self.model.Add(buy_var == 0).OnlyEnforceIf(buy_var_is_not_zero.Not())
+                            self.model.Add(buy_var != 0).OnlyEnforceIf(buy_var_is_not_zero)
 
-                            self.model.Add(dismiss_var == 0).OnlyEnforceIf(dismiss_var_is_zero)
-                            self.model.Add(dismiss_var != 0).OnlyEnforceIf(dismiss_var_is_zero.Not())
+                            self.model.Add(dismiss_var == 0).OnlyEnforceIf(dismiss_var_is_not_zero.Not())
+                            self.model.Add(dismiss_var != 0).OnlyEnforceIf(dismiss_var_is_not_zero)
 
                             # At least one of the boolean variables must be True
-                            self.model.AddBoolOr([buy_var_is_zero, dismiss_var_is_zero])
+                            self.model.AddBoolOr([buy_var_is_not_zero.Not(),dismiss_var_is_not_zero.Not()])
 
                             ## add constraint for dismiss
                             self.model.Add(dismiss_var <= sum_server_slot[dc][s])
@@ -333,10 +336,19 @@ class ServerFleetSolver:
                             sum_server_slot[dc][s] += buy_var - dismiss_var
                         elif buy_action:
                             buy_var = self.get_variables(_t,s,dc,'buy')
+                            buy_var_is_not_zero = self.get_binary_action_variable(_t,s,dc,'buy')
+                            ## link the boolean variables with the integer variables
+                            self.model.Add(buy_var == 0).OnlyEnforceIf(buy_var_is_not_zero.Not())
+                            self.model.Add(buy_var != 0).OnlyEnforceIf(buy_var_is_not_zero)
+                            ## add to sum_server
                             sum_server_slot[dc][s] += buy_var 
                         elif dismiss_action:
                             ## get dissmed var
                             dismiss_var = self.get_variables(_t,s,dc,'dismiss')
+                            dismiss_var_is_not_zero = self.get_binary_action_variable(_t,s,dc,'dismiss')
+                            ## link the boolean variables with the integer variables
+                            self.model.Add(dismiss_var == 0).OnlyEnforceIf(dismiss_var_is_not_zero.Not())
+                            self.model.Add(dismiss_var != 0).OnlyEnforceIf(dismiss_var_is_not_zero)
                             ## add cosntraint that sever dismissed must smaller than the number of this servers on this datacenter
                             self.model.Add(dismiss_var <= sum_server_slot[dc][s])
                             sum_server_slot[dc][s] -= dismiss_var
@@ -352,12 +364,52 @@ class ServerFleetSolver:
                         
         pass
 
+    def add_life_span_constraint(self):
+        """
+        Methods to add the life span constraint
+        This version only count dismiss and buy
+        """
+
+        time_steps = self.demand.time_step.unique()
+        servers = self.servers.server_generation
+        datacenters = self.datacenters.datacenter_id
+        # actions = self.actions
+        for ts in time_steps:
+            ts_buyed_server = {}
+            ## loop all servers
+            for dc in datacenters:
+                ts_buyed_server[dc] = {}
+                for s in servers:
+                    ## check if the buy variables is exist
+                    buy_exist = self.check_variables_exist(ts,s,dc,'buy')
+                    if buy_exist:
+                        ts_buyed_server[dc][s] = self.get_variables(ts,s,dc,'buy')
+                    else:
+                        continue
+                    ## get life span of the server
+                    life_span = int(self.servers[self.servers.server_generation == s].life_expectancy.values[0])
+                    dismiss_server = 0
+                    if ts + life_span <= time_steps[-1]:
+                        ## loop all time steps in this range
+                        for _t in range(ts+1, ts+1+life_span):
+                            ## check if the dismiss variables is exist
+                            dismiss_exist = self.check_variables_exist(_t,s,dc,'dismiss')
+                            if dismiss_exist:
+                                dismiss_server += self.get_variables(_t,s,dc,'dismiss')
+                            else:
+                                continue
+                        ## add constraint that the selled server has to larger than buyed server
+                        self.model.Add(dismiss_server >= ts_buyed_server[dc][s])
+        pass
+
     def compute_utilization_revenue(self,step=2,latency='low', server_generation='CPU.S1'):
         """
         - Integrate the utilization and revenue + datacenter constraints to reduce complexity
         """
         
-        demand = self.demand[self.demand.time_step==step][latency].sum()
+        demand = self.demand[self.demand.time_step==step][self.demand.server_generation==server_generation][latency].sum()
+        if demand==0:
+            return 0,0
         # pdb.set_trace()
         ## now get the deployed servers
         t = 0
@@ -416,45 +468,8 @@ class ServerFleetSolver:
         revenue = min_zf_demand * p_ig  
                         
         return (utilization,revenue)
+
     
-
-    def add_life_span_constraint(self):
-        """
-        Methods to add the life span constraint
-        This version only count dismiss and buy
-        """
-
-        time_steps = self.demand.time_step.unique()
-        servers = self.servers.server_generation
-        datacenters = self.datacenters.datacenter_id
-        # actions = self.actions
-        for ts in time_steps:
-            ts_buyed_server = {}
-            ## loop all servers
-            for dc in datacenters:
-                ts_buyed_server[dc] = {}
-                for s in servers:
-                    ## check if the buy variables is exist
-                    buy_exist = self.check_variables_exist(ts,s,dc,'buy')
-                    if buy_exist:
-                        ts_buyed_server[dc][s] = self.get_variables(ts,s,dc,'buy')
-                    else:
-                        continue
-                    ## get life span of the server
-                    life_span = int(self.servers[self.servers.server_generation == s].life_expectancy.values[0])
-                    dismiss_server = 0
-                    if ts + life_span <= time_steps[-1]:
-                        ## loop all time steps in this range
-                        for _t in range(ts+1, ts+1+life_span):
-                            ## check if the dismiss variables is exist
-                            dismiss_exist = self.check_variables_exist(_t,s,dc,'dismiss')
-                            if dismiss_exist:
-                                dismiss_server += self.get_variables(_t,s,dc,'dismiss')
-                            else:
-                                continue
-                        ## add constraint that the selled server has to larger than buyed server
-                        self.model.Add(dismiss_server >= ts_buyed_server[dc][s])
-        pass
 
     def compute_normalized_lifespan(self,step=2):
         """
@@ -494,12 +509,55 @@ class ServerFleetSolver:
         self.model.Add(denom_total_servers == total_servers + 1)
         self.model.AddDivisionEquality(normalized_life_span_t, num_total_lifepsan, denom_total_servers)
         return normalized_life_span_t
+    
+    def compute_cost(self, steps=2, server='CPU.S1', dc='DC1'):
+        """Compute the cost of the servers"""
+        total_cost = 0
+        ## take the life expectancy
+        life_expectancy = int(self.servers[self.servers.server_generation == server].life_expectancy.values[0])
+       
+        ## check if there is any new buying machine right at this step
+        buy_exist = self.check_variables_exist(steps,server,dc,'buy')
+        
+        if buy_exist:
+            ## get binary variable
+            buy_var = self.get_binary_action_variable(steps,server,dc,'buy')
+            ## get the number of servers
+            num_servers = self.get_variables(steps,server,dc,'buy')
+            ## get the cost of the server
+            cost = int(self.servers[self.servers.server_generation == server].purchase_price.values[0])
+            ## create a new variable that the multiplied between bianry varaible and num_servers
+            actual_num_servers = self.model.NewIntVar(0, 100 * self.max_server_buying, f"actual_num_servers_{steps}_{server}_{dc}")
+            self.model.AddMultiplicationEquality(actual_num_servers, buy_var, num_servers)
+            ## add the cost to total cost
+            total_cost += actual_num_servers * cost
+        ## calculate energy cost
+        e_cost = int(self.servers[self.servers.server_generation == server].energy_consumption.values[0])
+        total_cost += e_cost
+        ## take remain servers matrix
+        remain_servers = self.dict_alive_servers[server][dc]
+        ## loop over all time steps
+        for i in range(steps):
+            ## get the number of servers at this time step
+            num_active_servers = remain_servers[i][steps - 1]
+            ## get the maintainance cost of the server
+            maintainance_cost = int(self.servers[self.servers.server_generation == server].average_maintenance_fee.values[0])
+            ## indivual time span at this row
+            individual_time_span = steps - i 
+            ## individual alpha
+            alpha_i = maintainance_cost * ( 1+ 1.5 *individual_time_span / life_expectancy *  np.log2(1.5 * individual_time_span / life_expectancy))
+            ## multiply for 1000 and round it to nearest integer
+            alpha_i = int(alpha_i * 1000)
+            ## create new variable and devide it for 1000
+            alpha_i_var = self.model.NewIntVar(0, 1000 * MILLIONS, f"alpha_i_{steps}_{server}_{dc}_{i}")
+            self.model.AddDivisionEquality(alpha_i_var, alpha_i, 1000)
+            ## create new variable that multiply between num_active_servers and alpha_i
+            sub_var = self.model.NewIntVar(0, 1000 * MILLIONS, f"sub_var_{steps}_{server}_{dc}_{i}")
+            self.model.AddMultiplicationEquality(sub_var, num_active_servers, alpha_i_var)
+            total_cost +=  sub_var
+            
+        return total_cost
 
-    def add_demand_constraints(self):
-        """
-        Methods to add the demand constraints for each time steps
-        """
-        pass
 
     def add_objective(self):
         """
@@ -509,26 +567,26 @@ class ServerFleetSolver:
         for i in self.demand.time_step.unique():
             revenue = 0
             utilization = 0
+            cost=  0
             for latency in ['low','medium','high']:
                 for server_generation in self.servers.server_generation:
-                    # bj_i = self.model.NewIntVar(0, 9999999999999, f'oj_{i}_{latency}')
-                    # first_number = self.model.NewIntVar(0, 9999999999999, f'first_number_{i}_{latency}')
-                    # second_number = self.model.NewIntVar(0, 9999999999999, f'second_number_{i}_{latency}')
-                    # self.model.Add(first_number == self.compute_revenue(i,latency,server_generation))
-                    # self.model.Add(second_number == self.compute_utilization(i,latency,server_generation))
-                    # self.model.AddMultiplicationEquality(bj_i, first_number, second_number)
-                    # pdb.set_trace()
                     u,r = self.compute_utilization_revenue(i,latency,server_generation)
                     # # pdb.set_trace()
                     revenue += r
                     utilization += u
-            Oj += revenue + utilization
-                    # Oj += self.compute_revenue(i,latency,server_generation)
-            #         revenue += self.compute_revenue(i,latency,server_generation)
-            #         utilization += self.compute_utilization(i,latency,server_generation)
-            # temp_obj = self.model.NewIntVar(0, 9999999999999, f'temp_obj_{i}')
+            
+            ## loop server and dc
+            for server in self.servers.server_generation:
+                for dc in self.datacenters.datacenter_id:
+                    cost += self.compute_cost(i,server,dc)
+            P = revenue - cost 
+            U = self.model.NewIntVar(0, 100000 * MILLIONS, f"U_{i}")
+            self.model.AddDivisionEquality(U, utilization, 3 * len(self.servers.server_generation))
+            L = self.compute_normalized_lifespan(i)
+           
+            Oj += P + L + U
+           
         self.model.maximize(Oj)
-        # print(f"Solving with {self.model.SolverVersion()}")
     
     def random_uud_server_id(self):
         """
@@ -606,7 +664,7 @@ class ServerFleetSolver:
         ## add life span constraints
         self.add_life_span_constraint()
         ## add auxiliary varaibles
-        # self.create_auxillary_variables()
+        self.create_auxillary_variables()
         self.add_objective()
         solver = cp_model.CpSolver()
         solver.parameters.log_search_progress = True  # Disable search logging, enable when debugging
@@ -629,7 +687,8 @@ class ServerFleetSolver:
             print("Solution:")
             print("Objective value =", solver.objective_value)
         elif status == cp_model.INFEASIBLE:
-            print(f'{solver.SufficientAssumptionsForInfeasibility()}') 
+            for i in solver.SufficientAssumptionsForInfeasibility():
+                print(self.model.VarIndexToVarProto(i).name)
             print("Model is infeasible.")
             print(solver.ResponseStats())
         
@@ -650,14 +709,4 @@ class ServerFleetSolver:
         # with open(save_path, 'w') as f:
         #     json.dump(results, f)
 
-
-def main():
-    datacenters_path = './data/datacenters.csv'
-    demand_path = './data/demand.csv'
-    selling_prices_path = './data/selling_prices.csv'
-    servers_path = './data/servers.csv'
-    datacenters, demand, selling_prices, servers = read_input_data(datacenters_path, demand_path, selling_prices_path, servers_path)
-    solver = ServerFleetSolver(datacenters, demand, selling_prices, servers)
-    solver.solve()
-    pass
 
