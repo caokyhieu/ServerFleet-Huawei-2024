@@ -449,7 +449,7 @@ class ServerFleetSolver:
         scaled_Zf = self.model.NewIntVar(1, MILLIONS, f'scaled_Zf_{step}_{latency}_{server_generation}')
         
         # Properly handle the scaled multiplication using integer logic
-        scaled_Z = self.model.NewIntVar(1, 100* MILLIONS, f'scaled_Z_{step}_{latency}_{server_generation}')
+        scaled_Z = self.model.NewIntVar(1, 100 * MILLIONS, f'scaled_Z_{step}_{latency}_{server_generation}')
         self.model.Add(scaled_Z == Z * scaled_float)
         self.model.AddDivisionEquality(scaled_Zf, scaled_Z, scaling_factor)
        
@@ -457,10 +457,10 @@ class ServerFleetSolver:
         min_zf_demand = self.model.NewIntVar(0, MILLIONS, f'min_zf_demand_u_{step}_{latency}_{server_generation}')
         self.model.AddMinEquality(min_zf_demand, [scaled_Zf, int(demand)])
         num = self.model.NewIntVar(0, MILLIONS, f'num_{step}_{latency}_{server_generation}')
-        self.model.Add(num==min_zf_demand)
+        self.model.Add(num==min_zf_demand * scaling_factor)
         denom = self.model.NewIntVar(1, MILLIONS, f'denom_{step}_{latency}_{server_generation}')
         self.model.Add(denom==scaled_Zf)
-        utilization = self.model.NewIntVar(0, MILLIONS, f'utilization_{step}_{latency}_{server_generation}')
+        utilization = self.model.NewIntVar(0, scaling_factor, f'utilization_{step}_{latency}_{server_generation}')
         self.model.AddDivisionEquality(utilization,num,denom)
 
         ## compute revenue
@@ -493,7 +493,10 @@ class ServerFleetSolver:
                 except:
                     print(f"out of range: step {step} server {server} dc {dc} , but the array only have {len(self.dict_life_span[server][dc])}")
                 ## get toal deploy for corresponding server from datacenters
-                total_servers += self.get_accum_deployed_server_variables(step, server, dc)
+                acc_servers = self.get_accum_deployed_server_variables(step, server, dc)
+                total_servers += acc_servers
+                ## add constraint
+                self.model.Add(lifespan <= acc_servers * life_expectancy)
             ## normalize lifespan by life_expectancy
             normalized_life_span = self.model.NewIntVar(0, 100000 * MILLIONS, f"normalized_life_span_{server}_{step}")
             lifespan_var = self.model.NewIntVar(0, 100000 * MILLIONS, f"lifespan_var{server}_{step}")
@@ -501,12 +504,12 @@ class ServerFleetSolver:
             self.model.AddDivisionEquality(normalized_life_span, lifespan_var, life_expectancy) 
             total_lifespan += normalized_life_span
         
-        ## now add new varaibles
+        ## now add new variables
         normalized_life_span_t = self.model.NewIntVar(0 , MILLIONS, f"normalized_life_span_{step}")
         num_total_lifepsan = self.model.NewIntVar(0 , 100000 * MILLIONS, f"num_total_lifepsan_{step}")
         denom_total_servers = self.model.NewIntVar(1 , 100000 * MILLIONS, f"denom_total_servers_{step}")
         self.model.Add(num_total_lifepsan == total_lifespan)
-        self.model.Add(denom_total_servers == total_servers + 1)
+        self.model.Add(denom_total_servers == total_servers)
         self.model.AddDivisionEquality(normalized_life_span_t, num_total_lifepsan, denom_total_servers)
         return normalized_life_span_t
     
@@ -532,7 +535,7 @@ class ServerFleetSolver:
             ## add the cost to total cost
             total_cost += actual_num_servers * cost
         ## calculate energy cost
-        e_cost = int(self.servers[self.servers.server_generation == server].energy_consumption.values[0])
+        e_cost = int(self.servers[self.servers.server_generation == server].energy_consumption.values[0] * self.datacenters[self.datacenters.datacenter_id == dc].cost_of_energy.values[0]) 
         total_cost += e_cost
         ## take remain servers matrix
         remain_servers = self.dict_alive_servers[server][dc]
@@ -547,13 +550,13 @@ class ServerFleetSolver:
             ## individual alpha
             alpha_i = maintainance_cost * ( 1+ 1.5 *individual_time_span / life_expectancy *  np.log2(1.5 * individual_time_span / life_expectancy))
             ## multiply for 1000 and round it to nearest integer
-            alpha_i = int(alpha_i * 1000)
-            ## create new variable and devide it for 1000
-            alpha_i_var = self.model.NewIntVar(0, 1000 * MILLIONS, f"alpha_i_{steps}_{server}_{dc}_{i}")
-            self.model.AddDivisionEquality(alpha_i_var, alpha_i, 1000)
+            alpha_i = int(alpha_i * 100)
+            # ## create new variable and devide it for 1000
+            # alpha_i_var = self.model.NewIntVar(0, 1000 * MILLIONS, f"alpha_i_{steps}_{server}_{dc}_{i}")
+            # self.model.AddDivisionEquality(alpha_i_var, alpha_i, 1000)
             ## create new variable that multiply between num_active_servers and alpha_i
             sub_var = self.model.NewIntVar(0, 1000 * MILLIONS, f"sub_var_{steps}_{server}_{dc}_{i}")
-            self.model.AddMultiplicationEquality(sub_var, num_active_servers, alpha_i_var)
+            self.model.AddMultiplicationEquality(sub_var, num_active_servers, alpha_i)
             total_cost +=  sub_var
             
         return total_cost
@@ -580,8 +583,7 @@ class ServerFleetSolver:
                 for dc in self.datacenters.datacenter_id:
                     cost += self.compute_cost(i,server,dc)
             P = revenue - cost 
-            U = self.model.NewIntVar(0, 100000 * MILLIONS, f"U_{i}")
-            self.model.AddDivisionEquality(U, utilization, 3 * len(self.servers.server_generation))
+            U = utilization
             L = self.compute_normalized_lifespan(i)
            
             Oj += P + L + U
@@ -650,7 +652,6 @@ class ServerFleetSolver:
         return results
         
 
-
     def solve(self,save_path='solution.json'):
         """
         Methods to solve the problem
@@ -669,11 +670,11 @@ class ServerFleetSolver:
         solver = cp_model.CpSolver()
         solver.parameters.log_search_progress = True  # Disable search logging, enable when debugging
         # solver.parameters.cp_model_probing_level = 0  # Set probing level to 0
-        solver.parameters.cp_model_presolve = False  # Enable presolve to improve the performance
+        solver.parameters.cp_model_presolve = True  # Enable presolve to improve the performance
         solver.parameters.num_search_workers = 8  # Use 8 threads
         # solver.parameters.enumerate_all_solutions = True
 
-        solver.parameters.search_branching = cp_model.AUTOMATIC_SEARCH  # Use portfolio search ['AUTOMATIC_SEARCH', 'FIXED_SEARCH', 'LP_SEARCH', 'PORTFOLIO_SEARCH']
+        solver.parameters.search_branching = cp_model.LP_SEARCH  # Use portfolio search ['AUTOMATIC_SEARCH', 'FIXED_SEARCH', 'LP_SEARCH', 'PORTFOLIO_SEARCH']
         solver.parameters.max_time_in_seconds = 300.0  # Set a 120-second time limit
         solver.parameters.random_seed = 43  # Set a random seed for reproducibility
         
