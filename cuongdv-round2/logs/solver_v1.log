@@ -1,0 +1,48 @@
+2024-09-20 16:27:56,491 - MainProcess - Logging started
+2024-09-20 17:10:07,302 - MainProcess - Logging started
+2024-09-20 17:10:07,302 - MainProcess - Logging started
+2024-09-20 18:00:30,639 - MainProcess - Added 0 servers with total gain 0
+2024-09-20 18:05:25,758 - MainProcess - Logging started
+2024-09-20 18:05:50,194 - MainProcess - Added 0 servers with total gain 0
+2024-09-20 18:06:38,206 - MainProcess - Added 0 servers with total gain 0
+2024-09-20 18:09:00,815 - MainProcess - Added 1559 servers with total gain 638968370.4147426
+2024-09-20 18:09:36,550 - MainProcess - Added 1633 servers with total gain 691225317.6259288
+2024-09-20 18:13:36,258 - MainProcess - Added 1633 servers with total gain 691225317.6259288
+2024-09-20 18:16:06,284 - MainProcess - Added 1559 servers with total gain 638968370.4147426
+2024-09-20 18:17:06,293 - MainProcess - Added 1559 servers with total gain 638968370.4147426
+2024-09-20 18:22:01,916 - MainProcess - Initial solution: 0
+2024-09-20 18:22:34,901 - MainProcess - Initial solution: 0
+2024-09-20 18:22:45,013 - MainProcess - Initial solution: 0
+2024-09-20 18:25:08,572 - MainProcess - Initial solution: 0
+2024-09-20 18:30:46,057 - MainProcess - Added 40649 servers with total gain 1664564058.1788654
+2024-09-20 18:32:53,190 - MainProcess - Initial solution: 0
+2024-09-20 18:33:03,219 - MainProcess - Initial solution: 0
+2024-09-20 18:33:28,282 - MainProcess - Added 38946 servers with total gain 1660951154.2521672
+2024-09-20 18:33:36,104 - MainProcess - Merged 550 servers with total gain 3302760.8355264664
+2024-09-20 18:35:27,550 - MainProcess - Removed 6763 servers with total gain 139656366.79768205
+2024-09-20 18:35:27,552 - MainProcess - New best solution: 1803910281.8853757
+2024-09-20 18:42:12,087 - MainProcess - Initial solution: 0
+2024-09-20 18:42:39,574 - MainProcess - Added 23249 servers with total gain 1014209972.6116365
+2024-09-20 18:42:41,851 - MainProcess - Merged 80 servers with total gain 596641.4317134619
+2024-09-20 18:43:27,040 - MainProcess - Initial solution: 0
+2024-09-20 18:43:47,846 - MainProcess - Initial solution: 0
+2024-09-20 18:52:25,298 - MainProcess - Added 23647 servers with total gain 1014721209.9181658
+2024-09-20 18:52:27,705 - MainProcess - Merged 80 servers with total gain 608973.7333368063
+2024-09-20 18:53:13,732 - MainProcess - Removed 3533 servers with total gain 62662081.45237613
+2024-09-20 18:53:13,733 - MainProcess - New best solution: 1077992265.1038787
+2024-09-20 19:01:57,261 - MainProcess - Added 3619 servers with total gain 7576760.562108278
+2024-09-20 19:01:59,498 - MainProcess - Merged 4 servers with total gain 209333.7592537403
+2024-09-20 19:02:46,547 - MainProcess - Removed 2744 servers with total gain 32770178.200246334
+2024-09-20 19:02:46,549 - MainProcess - New best solution: 1118548537.625487
+2024-09-20 19:11:46,270 - MainProcess - Added 2814 servers with total gain 5969173.021638155
+2024-09-20 19:11:48,822 - MainProcess - Merged 3 servers with total gain 238455.7064359188
+2024-09-20 19:12:37,334 - MainProcess - Removed 2415 servers with total gain 22342952.943701744
+2024-09-20 19:12:37,336 - MainProcess - New best solution: 1147099119.297263
+2024-09-20 19:21:47,967 - MainProcess - Added 2419 servers with total gain 4462556.244395018
+2024-09-20 19:21:50,581 - MainProcess - Merged 4 servers with total gain 74526.76639604568
+2024-09-20 19:22:39,045 - MainProcess - Removed 2180 servers with total gain 18956056.31334424
+2024-09-20 19:22:39,047 - MainProcess - New best solution: 1170592258.6213982
+2024-09-20 19:31:26,031 - MainProcess - Added 2240 servers with total gain 4487505.931720495
+2024-09-20 19:31:28,758 - MainProcess - Merged 3 servers with total gain 114079.40899848938
+2024-09-20 19:32:17,873 - MainProcess - Removed 1928 servers with total gain 16349551.423969746
+2024-09-20 19:32:17,875 - MainProcess - New best solution: 1191543395.386087

@@ -1,0 +1,712 @@
+2024-09-20 22:43:17,401 - Solving Seed-8677 - Initial solution: 990697089.886087
+2024-09-20 22:43:17,428 - Solving Seed-1097 - Initial solution: 1137912031.886087
+2024-09-20 22:43:17,513 - Solving Seed-9859 - Initial solution: 1327749664.386087
+2024-09-20 22:43:17,558 - Solving Seed-2521 - Initial solution: 928377523.3860871
+2024-09-20 22:43:17,572 - Solving Seed-8053 - Initial solution: 1255318566.386087
+2024-09-20 22:43:17,601 - Solving Seed-2381 - Initial solution: 1088137017.386087
+2024-09-20 22:43:17,603 - Solving Seed-5351 - Initial solution: 1031477793.8860871
+2024-09-20 22:43:17,626 - Solving Seed-9221 - Initial solution: 1095361044.886087
+2024-09-20 22:43:17,699 - Solving Seed-6829 - Initial solution: 971615910.3860871
+2024-09-20 22:43:17,731 - Solving Seed-6047 - Initial solution: 1002403538.386087
+2024-09-20 22:44:07,846 - Solving Seed-9859 - Removed 927 servers with total gain 17166385.761304855
+2024-09-20 22:44:07,847 - Solving Seed-9859 - New best solution: 1344916050.1473918
+2024-09-20 22:44:08,816 - Solving Seed-8053 - Removed 1532 servers with total gain 17427837.98675227
+2024-09-20 22:44:08,818 - Solving Seed-8053 - New best solution: 1272746404.3728392
+2024-09-20 22:44:12,000 - Solving Seed-6829 - Removed 2299 servers with total gain 55441830.55775702
+2024-09-20 22:44:12,001 - Solving Seed-6829 - New best solution: 1027057740.9438441
+2024-09-20 22:44:12,690 - Solving Seed-2381 - Removed 4418 servers with total gain 90310206.3448565
+2024-09-20 22:44:12,692 - Solving Seed-2381 - New best solution: 1178447223.7309434
+2024-09-20 22:44:13,374 - Solving Seed-1097 - Removed 3960 servers with total gain 37328971.38423157
+2024-09-20 22:44:13,376 - Solving Seed-1097 - New best solution: 1175241003.2703185
+2024-09-20 22:44:13,627 - Solving Seed-5351 - Removed 4788 servers with total gain 91483307.78894985
+2024-09-20 22:44:13,628 - Solving Seed-5351 - New best solution: 1122961101.675037
+2024-09-20 22:44:13,859 - Solving Seed-9221 - Removed 3801 servers with total gain 51451058.75350547
+2024-09-20 22:44:13,860 - Solving Seed-9221 - New best solution: 1146812103.6395924
+2024-09-20 22:44:14,529 - Solving Seed-2521 - Removed 4322 servers with total gain 132256369.89867187
+2024-09-20 22:44:14,530 - Solving Seed-2521 - New best solution: 1060633893.2847589
+2024-09-20 22:44:14,568 - Solving Seed-8677 - Removed 4806 servers with total gain 115909719.76282978
+2024-09-20 22:44:14,569 - Solving Seed-8677 - New best solution: 1106606809.6489167
+2024-09-20 22:44:14,911 - Solving Seed-6047 - Removed 4746 servers with total gain 70973458.50234127
+2024-09-20 22:44:14,912 - Solving Seed-6047 - New best solution: 1073376996.8884282
+2024-09-20 22:44:44,489 - Solving Seed-9859 - Added 21230 servers with total gain 489150255.1263876
+2024-09-20 22:44:44,489 - Solving Seed-9859 - New best solution: 1834066305.2737794
+2024-09-20 22:44:44,629 - Solving Seed-8053 - Added 17803 servers with total gain 503295465.7518089
+2024-09-20 22:44:44,629 - Solving Seed-8053 - New best solution: 1776041870.124648
+2024-09-20 22:44:48,405 - Solving Seed-2381 - Added 22418 servers with total gain 608969405.7796736
+2024-09-20 22:44:48,406 - Solving Seed-2381 - New best solution: 1787416629.510617
+2024-09-20 22:44:49,820 - Solving Seed-6829 - Added 18672 servers with total gain 296726491.66066027
+2024-09-20 22:44:49,821 - Solving Seed-6829 - New best solution: 1323784232.6045043
+2024-09-20 22:44:50,143 - Solving Seed-1097 - Added 21450 servers with total gain 403081072.02053785
+2024-09-20 22:44:50,144 - Solving Seed-1097 - New best solution: 1578322075.2908564
+2024-09-20 22:44:53,484 - Solving Seed-9221 - Added 22392 servers with total gain 420897600.6819062
+2024-09-20 22:44:53,485 - Solving Seed-9221 - New best solution: 1567709704.3214986
+2024-09-20 22:44:54,072 - Solving Seed-5351 - Added 15083 servers with total gain 372235473.03796434
+2024-09-20 22:44:54,073 - Solving Seed-5351 - New best solution: 1495196574.7130013
+2024-09-20 22:44:54,123 - Solving Seed-6047 - Added 24061 servers with total gain 406855241.5699749
+2024-09-20 22:44:54,123 - Solving Seed-6047 - New best solution: 1480232238.458403
+2024-09-20 22:44:54,841 - Solving Seed-8677 - Added 20743 servers with total gain 442670545.65527153
+2024-09-20 22:44:54,842 - Solving Seed-8677 - New best solution: 1549277355.3041883
+2024-09-20 22:44:58,072 - Solving Seed-2521 - Added 18364 servers with total gain 224292815.80868924
+2024-09-20 22:44:58,073 - Solving Seed-2521 - New best solution: 1284926709.0934482
+2024-09-20 22:45:01,046 - Solving Seed-9859 - Merged 196 servers with total gain 3769917.2668890953
+2024-09-20 22:45:01,510 - Solving Seed-9859 - New best solution: 1837836222.5406685
+2024-09-20 22:45:07,941 - Solving Seed-8053 - Merged 384 servers with total gain 5132599.587598801
+2024-09-20 22:45:08,245 - Solving Seed-8053 - New best solution: 1781174469.712247
+2024-09-20 22:45:18,318 - Solving Seed-6829 - Merged 229 servers with total gain 3654654.191795349
+2024-09-20 22:45:18,687 - Solving Seed-6829 - New best solution: 1327438886.7962997
+2024-09-20 22:45:19,127 - Solving Seed-1097 - Merged 148 servers with total gain 2864931.8095440865
+2024-09-20 22:45:19,389 - Solving Seed-1097 - New best solution: 1581187007.1004004
+2024-09-20 22:45:19,867 - Solving Seed-2381 - Merged 559 servers with total gain 4786363.108052254
+2024-09-20 22:45:20,075 - Solving Seed-2381 - New best solution: 1792202992.6186693
+2024-09-20 22:45:20,171 - Solving Seed-9221 - Merged 90 servers with total gain 1304607.8792271614
+2024-09-20 22:45:20,511 - Solving Seed-9221 - New best solution: 1569014312.2007258
+2024-09-20 22:45:22,382 - Solving Seed-5351 - Merged 261 servers with total gain 7821602.063677788
+2024-09-20 22:45:22,679 - Solving Seed-5351 - New best solution: 1503018176.776679
+2024-09-20 22:45:22,866 - Solving Seed-6047 - Merged 155 servers with total gain 3159570.6225500107
+2024-09-20 22:45:23,097 - Solving Seed-6047 - New best solution: 1483391809.0809531
+2024-09-20 22:45:27,599 - Solving Seed-8677 - Merged 194 servers with total gain 9397162.02562666
+2024-09-20 22:45:27,778 - Solving Seed-8677 - New best solution: 1558674517.329815
+2024-09-20 22:45:28,403 - Solving Seed-2521 - Merged 75 servers with total gain 2929384.577623844
+2024-09-20 22:45:28,666 - Solving Seed-2521 - New best solution: 1287856093.671072
+2024-09-20 22:47:38,871 - Solving Seed-5351 - Removed 6604 servers with total gain 96392451.57957745
+2024-09-20 22:47:38,873 - Solving Seed-5351 - New best solution: 1599410628.3562565
+2024-09-20 22:47:41,001 - Solving Seed-5351 - Optimized selling prices with gain 107492551.53553581
+2024-09-20 22:47:41,002 - Solving Seed-5351 - New best solution: 1706903179.8917923
+2024-09-20 22:48:04,817 - Solving Seed-8053 - Removed 5345 servers with total gain 93827523.83103848
+2024-09-20 22:48:04,819 - Solving Seed-8053 - New best solution: 1875001993.5432854
+2024-09-20 22:48:07,039 - Solving Seed-8053 - Optimized selling prices with gain 95251415.39616871
+2024-09-20 22:48:07,039 - Solving Seed-8053 - New best solution: 1970253408.939454
+2024-09-20 22:48:21,070 - Solving Seed-6829 - Removed 5669 servers with total gain 109371637.01078963
+2024-09-20 22:48:21,072 - Solving Seed-6829 - New best solution: 1436810523.8070893
+2024-09-20 22:48:22,001 - Solving Seed-5351 - Added 4636 servers with total gain 13523437.313742876
+2024-09-20 22:48:22,001 - Solving Seed-5351 - New best solution: 1720426617.2055352
+2024-09-20 22:48:22,282 - Solving Seed-2521 - Removed 6767 servers with total gain 75674872.71588135
+2024-09-20 22:48:22,285 - Solving Seed-2521 - New best solution: 1363530966.3869534
+2024-09-20 22:48:23,269 - Solving Seed-6829 - Optimized selling prices with gain 127262085.19521666
+2024-09-20 22:48:23,270 - Solving Seed-6829 - New best solution: 1564072609.002306
+2024-09-20 22:48:24,630 - Solving Seed-2521 - Optimized selling prices with gain 138434142.8658514
+2024-09-20 22:48:24,630 - Solving Seed-2521 - New best solution: 1501965109.2528048
+2024-09-20 22:48:32,566 - Solving Seed-5351 - Merged 116 servers with total gain 3238253.992349148
+2024-09-20 22:48:32,731 - Solving Seed-5351 - New best solution: 1723664871.1978843
+2024-09-20 22:48:38,193 - Solving Seed-2381 - Removed 6181 servers with total gain 104665188.51984358
+2024-09-20 22:48:38,196 - Solving Seed-2381 - New best solution: 1896868181.1385128
+2024-09-20 22:48:40,374 - Solving Seed-2381 - Optimized selling prices with gain 91947107.3338728
+2024-09-20 22:48:40,374 - Solving Seed-2381 - New best solution: 1988815288.4723856
+2024-09-20 22:48:46,337 - Solving Seed-8053 - Added 4160 servers with total gain 13516987.274098396
+2024-09-20 22:48:46,337 - Solving Seed-8053 - New best solution: 1983770396.2135525
+2024-09-20 22:48:52,305 - Solving Seed-8677 - Removed 7685 servers with total gain 107337281.57975245
+2024-09-20 22:48:52,307 - Solving Seed-8677 - New best solution: 1666011798.9095674
+2024-09-20 22:48:54,694 - Solving Seed-8677 - Optimized selling prices with gain 114557380.96388674
+2024-09-20 22:48:54,694 - Solving Seed-8677 - New best solution: 1780569179.873454
+2024-09-20 22:48:55,730 - Solving Seed-9859 - Removed 8380 servers with total gain 113103725.86428523
+2024-09-20 22:48:55,732 - Solving Seed-9859 - New best solution: 1950939948.4049537
+2024-09-20 22:48:58,168 - Solving Seed-9859 - Optimized selling prices with gain 125306085.11121488
+2024-09-20 22:48:58,168 - Solving Seed-9859 - New best solution: 2076246033.5161686
+2024-09-20 22:48:58,212 - Solving Seed-1097 - Removed 10032 servers with total gain 87649132.12647367
+2024-09-20 22:48:58,215 - Solving Seed-1097 - New best solution: 1668836139.226874
+2024-09-20 22:49:00,020 - Solving Seed-6829 - Added 4973 servers with total gain 12475239.5608747
+2024-09-20 22:49:00,021 - Solving Seed-6829 - New best solution: 1576547848.5631807
+2024-09-20 22:49:00,719 - Solving Seed-1097 - Optimized selling prices with gain 99228413.13442588
+2024-09-20 22:49:00,719 - Solving Seed-1097 - New best solution: 1768064552.3613
+2024-09-20 22:49:02,790 - Solving Seed-9221 - Removed 7155 servers with total gain 92645192.10417628
+2024-09-20 22:49:02,795 - Solving Seed-9221 - New best solution: 1661659504.304902
+2024-09-20 22:49:05,082 - Solving Seed-2521 - Added 5293 servers with total gain 10908833.705401659
+2024-09-20 22:49:05,083 - Solving Seed-2521 - New best solution: 1512873942.9582064
+2024-09-20 22:49:05,311 - Solving Seed-9221 - Optimized selling prices with gain 74602881.13211536
+2024-09-20 22:49:05,312 - Solving Seed-9221 - New best solution: 1736262385.4370174
+2024-09-20 22:49:15,028 - Solving Seed-8053 - Merged 401 servers with total gain 4031047.594606161
+2024-09-20 22:49:15,216 - Solving Seed-8053 - New best solution: 1987801443.8081586
+2024-09-20 22:49:16,836 - Solving Seed-6829 - Merged 74 servers with total gain 1145630.9830715656
+2024-09-20 22:49:16,999 - Solving Seed-6829 - New best solution: 1577693479.5462523
+2024-09-20 22:49:21,483 - Solving Seed-2381 - Added 5646 servers with total gain 18380032.994249105
+2024-09-20 22:49:21,484 - Solving Seed-2381 - New best solution: 2007195321.4666348
+2024-09-20 22:49:25,829 - Solving Seed-6047 - Removed 7786 servers with total gain 122309850.85744429
+2024-09-20 22:49:25,832 - Solving Seed-6047 - New best solution: 1605701659.9383974
+2024-09-20 22:49:28,151 - Solving Seed-6047 - Optimized selling prices with gain 56169937.61564469
+2024-09-20 22:49:28,151 - Solving Seed-6047 - New best solution: 1661871597.554042
+2024-09-20 22:49:28,983 - Solving Seed-2521 - Merged 58 servers with total gain 823055.7133178711
+2024-09-20 22:49:29,174 - Solving Seed-2521 - New best solution: 1513696998.6715243
+2024-09-20 22:49:35,974 - Solving Seed-8677 - Added 8433 servers with total gain 19722503.847688675
+2024-09-20 22:49:35,974 - Solving Seed-8677 - New best solution: 1800291683.7211428
+2024-09-20 22:49:39,225 - Solving Seed-9859 - Added 5903 servers with total gain 22131389.695949793
+2024-09-20 22:49:39,226 - Solving Seed-9859 - New best solution: 2098377423.2121184
+2024-09-20 22:49:40,194 - Solving Seed-2381 - Merged 313 servers with total gain 1927599.1682748795
+2024-09-20 22:49:40,391 - Solving Seed-2381 - New best solution: 2009122920.6349096
+2024-09-20 22:49:42,109 - Solving Seed-1097 - Added 10074 servers with total gain 15649344.303768158
+2024-09-20 22:49:42,109 - Solving Seed-1097 - New best solution: 1783713896.6650681
+2024-09-20 22:49:47,788 - Solving Seed-9221 - Added 7921 servers with total gain 12458460.110010386
+2024-09-20 22:49:47,789 - Solving Seed-9221 - New best solution: 1748720845.5470278
+2024-09-20 22:50:06,263 - Solving Seed-6047 - Added 7184 servers with total gain 22354706.60299301
+2024-09-20 22:50:06,263 - Solving Seed-6047 - New best solution: 1684226304.157035
+2024-09-20 22:50:07,616 - Solving Seed-8677 - Merged 130 servers with total gain 2403155.6786170006
+2024-09-20 22:50:07,956 - Solving Seed-8677 - New best solution: 1802694839.3997598
+2024-09-20 22:50:10,755 - Solving Seed-9859 - Merged 451 servers with total gain 6633675.822420359
+2024-09-20 22:50:11,024 - Solving Seed-9859 - New best solution: 2105011099.0345387
+2024-09-20 22:50:12,110 - Solving Seed-1097 - Merged 144 servers with total gain 1187506.099296093
+2024-09-20 22:50:12,460 - Solving Seed-1097 - New best solution: 1784901402.7643642
+2024-09-20 22:50:16,181 - Solving Seed-9221 - Merged 167 servers with total gain 1260067.3315210342
+2024-09-20 22:50:16,460 - Solving Seed-9221 - New best solution: 1749980912.8785489
+2024-09-20 22:50:27,146 - Solving Seed-6047 - Merged 79 servers with total gain 1152874.0833661556
+2024-09-20 22:50:27,396 - Solving Seed-6047 - New best solution: 1685379178.2404013
+2024-09-20 22:50:46,879 - Solving Seed-5351 - Removed 4807 servers with total gain 53696400.39474702
+2024-09-20 22:50:46,882 - Solving Seed-5351 - New best solution: 1777361271.5926313
+2024-09-20 22:51:28,023 - Solving Seed-5351 - Added 3715 servers with total gain 10853579.941933393
+2024-09-20 22:51:28,023 - Solving Seed-5351 - New best solution: 1788214851.5345647
+2024-09-20 22:51:39,283 - Solving Seed-5351 - Merged 57 servers with total gain 984302.1061284542
+2024-09-20 22:51:39,426 - Solving Seed-5351 - New best solution: 1789199153.6406932
+2024-09-20 22:52:16,525 - Solving Seed-8053 - Removed 4415 servers with total gain 53394284.40399194
+2024-09-20 22:52:16,528 - Solving Seed-8053 - New best solution: 2041195728.2121506
+2024-09-20 22:52:35,075 - Solving Seed-2521 - Removed 5088 servers with total gain 37933427.15847969
+2024-09-20 22:52:35,077 - Solving Seed-2521 - New best solution: 1551630425.830004
+2024-09-20 22:52:36,840 - Solving Seed-6829 - Removed 4940 servers with total gain 49410280.28986001
+2024-09-20 22:52:36,842 - Solving Seed-6829 - New best solution: 1627103759.8361123
+2024-09-20 22:52:54,871 - Solving Seed-8053 - Added 3658 servers with total gain 10062175.989498377
+2024-09-20 22:52:54,872 - Solving Seed-8053 - New best solution: 2051257904.201649
+2024-09-20 22:53:12,340 - Solving Seed-8053 - Merged 258 servers with total gain 3206051.86392045
+2024-09-20 22:53:12,528 - Solving Seed-8053 - New best solution: 2054463956.0655694
+2024-09-20 22:53:13,022 - Solving Seed-6829 - Added 4477 servers with total gain 8994951.051325798
+2024-09-20 22:53:13,022 - Solving Seed-6829 - New best solution: 1636098710.887438
+2024-09-20 22:53:13,942 - Solving Seed-2381 - Removed 5566 servers with total gain 62559447.884072304
+2024-09-20 22:53:13,944 - Solving Seed-2381 - New best solution: 2071682368.518982
+2024-09-20 22:53:14,058 - Solving Seed-2521 - Added 4547 servers with total gain 8591654.584730864
+2024-09-20 22:53:14,058 - Solving Seed-2521 - New best solution: 1560222080.4147348
+2024-09-20 22:53:16,133 - Solving Seed-2381 - Optimized selling prices with gain 14743646.515552282
+2024-09-20 22:53:16,134 - Solving Seed-2381 - New best solution: 2086426015.0345342
+2024-09-20 22:53:29,062 - Solving Seed-6829 - Merged 69 servers with total gain 1176909.3100993633
+2024-09-20 22:53:29,314 - Solving Seed-6829 - New best solution: 1637275620.1975374
+2024-09-20 22:53:32,280 - Solving Seed-5351 - Removed 2843 servers with total gain 24368760.332378864
+2024-09-20 22:53:32,284 - Solving Seed-5351 - New best solution: 1813567913.973072
+2024-09-20 22:53:35,415 - Solving Seed-2521 - Merged 26 servers with total gain 555603.741271019
+2024-09-20 22:53:35,702 - Solving Seed-2521 - New best solution: 1560777684.1560059
+2024-09-20 22:53:42,748 - Solving Seed-9859 - Removed 5688 servers with total gain 62400312.66195297
+2024-09-20 22:53:42,751 - Solving Seed-9859 - New best solution: 2167411411.6964917
+2024-09-20 22:53:56,806 - Solving Seed-2381 - Added 1510 servers with total gain 9144262.462349653
+2024-09-20 22:53:56,807 - Solving Seed-2381 - New best solution: 2095570277.4968839
+2024-09-20 22:54:08,946 - Solving Seed-2381 - Merged 267 servers with total gain 1959832.2315540314
+2024-09-20 22:54:09,121 - Solving Seed-2381 - New best solution: 2097530109.728438
+2024-09-20 22:54:09,446 - Solving Seed-8677 - Removed 6333 servers with total gain 68602188.41243196
+2024-09-20 22:54:09,454 - Solving Seed-8677 - New best solution: 1871297027.8121917
+2024-09-20 22:54:12,610 - Solving Seed-5351 - Added 2905 servers with total gain 6940090.882634401
+2024-09-20 22:54:12,611 - Solving Seed-5351 - New best solution: 1820508004.8557065
+2024-09-20 22:54:19,118 - Solving Seed-1097 - Removed 7188 servers with total gain 51672323.62880087
+2024-09-20 22:54:19,121 - Solving Seed-1097 - New best solution: 1836573726.393165
+2024-09-20 22:54:20,214 - Solving Seed-9859 - Added 4591 servers with total gain 14258481.042032719
+2024-09-20 22:54:20,215 - Solving Seed-9859 - New best solution: 2181669892.7385244
+2024-09-20 22:54:21,393 - Solving Seed-1097 - Optimized selling prices with gain 20129101.63702202
+2024-09-20 22:54:21,393 - Solving Seed-1097 - New best solution: 1856702828.0301871
+2024-09-20 22:54:21,582 - Solving Seed-5351 - Merged 31 servers with total gain 769802.7035472393
+2024-09-20 22:54:21,808 - Solving Seed-5351 - New best solution: 1821277807.5592537
+2024-09-20 22:54:34,715 - Solving Seed-9859 - Merged 86 servers with total gain 1478297.4487390518
+2024-09-20 22:54:34,890 - Solving Seed-9859 - New best solution: 2183148190.1872635
+2024-09-20 22:54:35,921 - Solving Seed-9221 - Removed 7079 servers with total gain 65101069.334839344
+2024-09-20 22:54:35,923 - Solving Seed-9221 - New best solution: 1815081982.2133882
+2024-09-20 22:54:38,168 - Solving Seed-9221 - Optimized selling prices with gain 30285253.310319662
+2024-09-20 22:54:38,168 - Solving Seed-9221 - New best solution: 1845367235.5237079
+2024-09-20 22:54:46,672 - Solving Seed-6047 - Removed 5830 servers with total gain 67339993.7000699
+2024-09-20 22:54:46,674 - Solving Seed-6047 - New best solution: 1752719171.9404712
+2024-09-20 22:54:49,056 - Solving Seed-6047 - Optimized selling prices with gain 67885542.60844517
+2024-09-20 22:54:49,056 - Solving Seed-6047 - New best solution: 1820604714.5489163
+2024-09-20 22:54:50,019 - Solving Seed-8677 - Added 6838 servers with total gain 14184895.867527008
+2024-09-20 22:54:50,020 - Solving Seed-8677 - New best solution: 1885481923.6797187
+2024-09-20 22:55:01,418 - Solving Seed-1097 - Added 4448 servers with total gain 7596659.892050028
+2024-09-20 22:55:01,419 - Solving Seed-1097 - New best solution: 1864299487.9222372
+2024-09-20 22:55:19,540 - Solving Seed-8677 - Merged 126 servers with total gain 2206057.57443285
+2024-09-20 22:55:19,791 - Solving Seed-8677 - New best solution: 1887687981.2541516
+2024-09-20 22:55:19,878 - Solving Seed-1097 - Merged 27 servers with total gain 587699.3996477127
+2024-09-20 22:55:20,052 - Solving Seed-1097 - New best solution: 1864887187.3218849
+2024-09-20 22:55:23,283 - Solving Seed-9221 - Added 1680 servers with total gain 7102220.460958719
+2024-09-20 22:55:23,284 - Solving Seed-9221 - New best solution: 1852469455.9846666
+2024-09-20 22:55:28,271 - Solving Seed-6047 - Added 3333 servers with total gain 15194353.078929424
+2024-09-20 22:55:28,271 - Solving Seed-6047 - New best solution: 1835799067.6278458
+2024-09-20 22:55:37,926 - Solving Seed-9221 - Merged 39 servers with total gain 150521.60199785233
+2024-09-20 22:55:38,079 - Solving Seed-9221 - New best solution: 1852619977.5866644
+2024-09-20 22:55:44,167 - Solving Seed-6047 - Merged 24 servers with total gain 1273121.7172460556
+2024-09-20 22:55:44,395 - Solving Seed-6047 - New best solution: 1837072189.3450918
+2024-09-20 22:55:52,442 - Solving Seed-8053 - Removed 3089 servers with total gain 30093907.21976614
+2024-09-20 22:55:52,446 - Solving Seed-8053 - New best solution: 2084557863.2853355
+2024-09-20 22:56:17,132 - Solving Seed-5351 - Removed 2361 servers with total gain 16987983.47350335
+2024-09-20 22:56:17,136 - Solving Seed-5351 - New best solution: 1838265791.032757
+2024-09-20 22:56:18,919 - Solving Seed-2521 - Removed 3803 servers with total gain 24993536.802172184
+2024-09-20 22:56:18,922 - Solving Seed-2521 - New best solution: 1585771220.958178
+2024-09-20 22:56:33,596 - Solving Seed-8053 - Added 3070 servers with total gain 8641438.155768871
+2024-09-20 22:56:33,596 - Solving Seed-8053 - New best solution: 2093199301.4411044
+2024-09-20 22:56:34,307 - Solving Seed-6829 - Removed 3735 servers with total gain 29549562.574625254
+2024-09-20 22:56:34,310 - Solving Seed-6829 - New best solution: 1666825182.7721627
+2024-09-20 22:56:38,335 - Solving Seed-2381 - Removed 4392 servers with total gain 62967307.27865887
+2024-09-20 22:56:38,337 - Solving Seed-2381 - New best solution: 2160497417.007097
+2024-09-20 22:56:47,351 - Solving Seed-8053 - Merged 116 servers with total gain 1361370.6537189484
+2024-09-20 22:56:47,550 - Solving Seed-8053 - New best solution: 2094560672.0948234
+2024-09-20 22:56:59,191 - Solving Seed-5351 - Added 2323 servers with total gain 5983643.3984668255
+2024-09-20 22:56:59,191 - Solving Seed-5351 - New best solution: 1844249434.4312239
+2024-09-20 22:57:00,475 - Solving Seed-2521 - Added 3772 servers with total gain 7195163.161279678
+2024-09-20 22:57:00,475 - Solving Seed-2521 - New best solution: 1592966384.1194577
+2024-09-20 22:57:09,774 - Solving Seed-5351 - Merged 43 servers with total gain 747983.3290007114
+2024-09-20 22:57:09,910 - Solving Seed-5351 - New best solution: 1844997417.7602246
+2024-09-20 22:57:12,772 - Solving Seed-6829 - Added 3692 servers with total gain 7708978.784124613
+2024-09-20 22:57:12,772 - Solving Seed-6829 - New best solution: 1674534161.5562873
+2024-09-20 22:57:20,115 - Solving Seed-2381 - Added 2368 servers with total gain 7767754.766798496
+2024-09-20 22:57:20,116 - Solving Seed-2381 - New best solution: 2168265171.7738953
+2024-09-20 22:57:22,961 - Solving Seed-2521 - Merged 3 servers with total gain 134351.56401848793
+2024-09-20 22:57:23,204 - Solving Seed-2521 - New best solution: 1593100735.6834762
+2024-09-20 22:57:29,194 - Solving Seed-6829 - Merged 27 servers with total gain 941475.2736935616
+2024-09-20 22:57:29,363 - Solving Seed-6829 - New best solution: 1675475636.8299809
+2024-09-20 22:57:31,978 - Solving Seed-2381 - Merged 220 servers with total gain 2840981.7072639465
+2024-09-20 22:57:32,124 - Solving Seed-2381 - New best solution: 2171106153.481159
+2024-09-20 22:57:54,339 - Solving Seed-9859 - Removed 4049 servers with total gain 30120594.87174225
+2024-09-20 22:57:54,342 - Solving Seed-9859 - New best solution: 2213268785.0590057
+2024-09-20 22:58:30,058 - Solving Seed-9859 - Added 4081 servers with total gain 10553980.49390459
+2024-09-20 22:58:30,059 - Solving Seed-9859 - New best solution: 2223822765.5529103
+2024-09-20 22:58:40,069 - Solving Seed-1097 - Removed 6011 servers with total gain 60431862.55337262
+2024-09-20 22:58:40,071 - Solving Seed-1097 - New best solution: 1925319049.8752575
+2024-09-20 22:58:40,242 - Solving Seed-9221 - Removed 5316 servers with total gain 61996447.539183855
+2024-09-20 22:58:40,245 - Solving Seed-9221 - New best solution: 1914616425.1258483
+2024-09-20 22:58:42,527 - Solving Seed-9859 - Merged 90 servers with total gain 1115540.9126343727
+2024-09-20 22:58:42,725 - Solving Seed-9859 - New best solution: 2224938306.4655447
+2024-09-20 22:59:03,264 - Solving Seed-5351 - Removed 2100 servers with total gain 12768272.023430824
+2024-09-20 22:59:03,266 - Solving Seed-5351 - New best solution: 1857765689.7836554
+2024-09-20 22:59:20,602 - Solving Seed-1097 - Added 4055 servers with total gain 6105058.595725536
+2024-09-20 22:59:20,602 - Solving Seed-1097 - New best solution: 1931424108.470983
+2024-09-20 22:59:21,989 - Solving Seed-6047 - Removed 5809 servers with total gain 84163417.0793953
+2024-09-20 22:59:21,992 - Solving Seed-6047 - New best solution: 1921235606.424487
+2024-09-20 22:59:24,755 - Solving Seed-8677 - Removed 5055 servers with total gain 33837215.200378895
+2024-09-20 22:59:24,759 - Solving Seed-8677 - New best solution: 1921525196.4545305
+2024-09-20 22:59:25,794 - Solving Seed-8053 - Removed 2619 servers with total gain 23024212.586033344
+2024-09-20 22:59:25,797 - Solving Seed-8053 - New best solution: 2117584884.6808567
+2024-09-20 22:59:27,477 - Solving Seed-9221 - Added 3447 servers with total gain 8214881.504435778
+2024-09-20 22:59:27,477 - Solving Seed-9221 - New best solution: 1922831306.630284
+2024-09-20 22:59:33,414 - Solving Seed-2381 - Removed 1789 servers with total gain 12166258.161064148
+2024-09-20 22:59:33,419 - Solving Seed-2381 - New best solution: 2183272411.6422234
+2024-09-20 22:59:38,898 - Solving Seed-1097 - Merged 105 servers with total gain 1649386.7211976051
+2024-09-20 22:59:39,117 - Solving Seed-1097 - New best solution: 1933073495.1921806
+2024-09-20 22:59:43,211 - Solving Seed-9221 - Merged 115 servers with total gain 690372.2026560307
+2024-09-20 22:59:43,364 - Solving Seed-9221 - New best solution: 1923521678.83294
+2024-09-20 22:59:44,994 - Solving Seed-5351 - Added 2165 servers with total gain 5367018.4473519325
+2024-09-20 22:59:44,994 - Solving Seed-5351 - New best solution: 1863132708.2310073
+2024-09-20 22:59:54,022 - Solving Seed-5351 - Merged 10 servers with total gain 406363.2383596897
+2024-09-20 22:59:54,139 - Solving Seed-5351 - New best solution: 1863539071.469367
+2024-09-20 23:00:01,855 - Solving Seed-2521 - Removed 3285 servers with total gain 20445128.69331622
+2024-09-20 23:00:01,858 - Solving Seed-2521 - New best solution: 1613545864.3767924
+2024-09-20 23:00:05,131 - Solving Seed-6047 - Added 3401 servers with total gain 10877195.228123665
+2024-09-20 23:00:05,131 - Solving Seed-6047 - New best solution: 1932112801.6526108
+2024-09-20 23:00:05,743 - Solving Seed-8677 - Added 5345 servers with total gain 10878785.444859266
+2024-09-20 23:00:05,744 - Solving Seed-8677 - New best solution: 1932403981.8993897
+2024-09-20 23:00:07,631 - Solving Seed-8053 - Added 2649 servers with total gain 7273578.578906536
+2024-09-20 23:00:07,632 - Solving Seed-8053 - New best solution: 2124858463.2597632
+2024-09-20 23:00:14,857 - Solving Seed-2381 - Added 1658 servers with total gain 4573211.880831242
+2024-09-20 23:00:14,857 - Solving Seed-2381 - New best solution: 2187845623.5230546
+2024-09-20 23:00:21,017 - Solving Seed-6047 - Merged 18 servers with total gain 1273188.2755513191
+2024-09-20 23:00:21,214 - Solving Seed-6047 - New best solution: 1933385989.928162
+2024-09-20 23:00:24,016 - Solving Seed-2381 - Merged 30 servers with total gain 234537.44389295578
+2024-09-20 23:00:24,179 - Solving Seed-2381 - New best solution: 2188080160.9669476
+2024-09-20 23:00:26,038 - Solving Seed-8053 - Merged 165 servers with total gain 1581589.3240094185
+2024-09-20 23:00:26,193 - Solving Seed-8053 - New best solution: 2126440052.5837727
+2024-09-20 23:00:31,598 - Solving Seed-6829 - Removed 3330 servers with total gain 23010350.96487665
+2024-09-20 23:00:31,601 - Solving Seed-6829 - New best solution: 1698485987.7948575
+2024-09-20 23:00:38,066 - Solving Seed-8677 - Merged 68 servers with total gain 2209548.0275444984
+2024-09-20 23:00:38,259 - Solving Seed-8677 - New best solution: 1934613529.9269342
+2024-09-20 23:00:44,156 - Solving Seed-2521 - Added 3345 servers with total gain 6678651.752837658
+2024-09-20 23:00:44,157 - Solving Seed-2521 - New best solution: 1620224516.12963
+2024-09-20 23:01:06,213 - Solving Seed-2521 - Merged 6 servers with total gain 73783.7436132431
+2024-09-20 23:01:06,373 - Solving Seed-2521 - New best solution: 1620298299.8732433
+2024-09-20 23:01:08,950 - Solving Seed-6829 - Added 3341 servers with total gain 7042476.40961957
+2024-09-20 23:01:08,950 - Solving Seed-6829 - New best solution: 1705528464.204477
+2024-09-20 23:01:24,075 - Solving Seed-6829 - Merged 11 servers with total gain 268134.3142595291
+2024-09-20 23:01:24,314 - Solving Seed-6829 - New best solution: 1705796598.5187366
+2024-09-20 23:01:52,621 - Solving Seed-5351 - Removed 1833 servers with total gain 10296288.52137971
+2024-09-20 23:01:52,624 - Solving Seed-5351 - New best solution: 1873835359.9907467
+2024-09-20 23:02:03,320 - Solving Seed-9859 - Removed 3282 servers with total gain 24802654.770451546
+2024-09-20 23:02:03,322 - Solving Seed-9859 - New best solution: 2249740961.2359962
+2024-09-20 23:02:21,993 - Solving Seed-9221 - Removed 2843 servers with total gain 26139879.715554714
+2024-09-20 23:02:21,996 - Solving Seed-9221 - New best solution: 1949661558.5484948
+2024-09-20 23:02:27,676 - Solving Seed-2381 - Removed 1462 servers with total gain 9518822.113642216
+2024-09-20 23:02:27,678 - Solving Seed-2381 - New best solution: 2197598983.08059
+2024-09-20 23:02:31,090 - Solving Seed-5351 - Added 1876 servers with total gain 3945009.1984324455
+2024-09-20 23:02:31,090 - Solving Seed-5351 - New best solution: 1877780369.1891792
+2024-09-20 23:02:36,600 - Solving Seed-1097 - Removed 3516 servers with total gain 19515172.667217016
+2024-09-20 23:02:36,603 - Solving Seed-1097 - New best solution: 1952588667.8593976
+2024-09-20 23:02:40,216 - Solving Seed-9859 - Added 3323 servers with total gain 7065618.203191757
+2024-09-20 23:02:40,217 - Solving Seed-9859 - New best solution: 2256806579.439188
+2024-09-20 23:02:40,987 - Solving Seed-5351 - Merged 52 servers with total gain 771033.2592039108
+2024-09-20 23:02:41,106 - Solving Seed-5351 - New best solution: 1878551402.448383
+2024-09-20 23:02:53,786 - Solving Seed-9859 - Merged 71 servers with total gain 614584.6924800873
+2024-09-20 23:02:54,017 - Solving Seed-9859 - New best solution: 2257421164.131668
+2024-09-20 23:03:05,371 - Solving Seed-8053 - Removed 2219 servers with total gain 15987001.653034925
+2024-09-20 23:03:05,373 - Solving Seed-8053 - New best solution: 2142427054.2368076
+2024-09-20 23:03:08,239 - Solving Seed-2381 - Added 1351 servers with total gain 3516368.892362118
+2024-09-20 23:03:08,240 - Solving Seed-2381 - New best solution: 2201115351.972952
+2024-09-20 23:03:08,275 - Solving Seed-9221 - Added 2743 servers with total gain 6951893.2682368755
+2024-09-20 23:03:08,276 - Solving Seed-9221 - New best solution: 1956613451.8167317
+2024-09-20 23:03:15,672 - Solving Seed-2381 - Merged 10 servers with total gain 42724.27281284332
+2024-09-20 23:03:15,816 - Solving Seed-2381 - New best solution: 2201158076.2457647
+2024-09-20 23:03:18,381 - Solving Seed-1097 - Added 3445 servers with total gain 4865134.63276124
+2024-09-20 23:03:18,381 - Solving Seed-1097 - New best solution: 1957453802.492159
+2024-09-20 23:03:21,205 - Solving Seed-9221 - Merged 25 servers with total gain 48183.37224936485
+2024-09-20 23:03:21,367 - Solving Seed-6047 - Removed 3138 servers with total gain 18670240.870903015
+2024-09-20 23:03:21,371 - Solving Seed-6047 - New best solution: 1952056230.799065
+2024-09-20 23:03:21,409 - Solving Seed-9221 - New best solution: 1956661635.188981
+2024-09-20 23:03:34,196 - Solving Seed-1097 - Merged 18 servers with total gain 225420.57649970055
+2024-09-20 23:03:34,360 - Solving Seed-1097 - New best solution: 1957679223.0686586
+2024-09-20 23:03:46,559 - Solving Seed-8053 - Added 2325 servers with total gain 5668097.982791185
+2024-09-20 23:03:46,560 - Solving Seed-8053 - New best solution: 2148095152.219599
+2024-09-20 23:03:47,047 - Solving Seed-2521 - Removed 2935 servers with total gain 17492742.508324623
+2024-09-20 23:03:47,050 - Solving Seed-2521 - New best solution: 1637791042.381568
+2024-09-20 23:04:00,053 - Solving Seed-8053 - Merged 68 servers with total gain 569990.5076370239
+2024-09-20 23:04:00,217 - Solving Seed-8053 - New best solution: 2148665142.727236
+2024-09-20 23:04:02,880 - Solving Seed-6047 - Added 3069 servers with total gain 6826477.043255806
+2024-09-20 23:04:02,881 - Solving Seed-6047 - New best solution: 1958882707.842321
+2024-09-20 23:04:15,807 - Solving Seed-6047 - Merged 12 servers with total gain 569683.5890357494
+2024-09-20 23:04:16,079 - Solving Seed-6047 - New best solution: 1959452391.4313567
+2024-09-20 23:04:25,565 - Solving Seed-6829 - Removed 2902 servers with total gain 19082343.688040257
+2024-09-20 23:04:25,568 - Solving Seed-6829 - New best solution: 1724878942.2067769
+2024-09-20 23:04:27,994 - Solving Seed-2521 - Added 2914 servers with total gain 5380847.105528116
+2024-09-20 23:04:27,994 - Solving Seed-2521 - New best solution: 1643171889.487096
+2024-09-20 23:04:34,183 - Solving Seed-5351 - Removed 1718 servers with total gain 8109364.457136393
+2024-09-20 23:04:34,185 - Solving Seed-5351 - New best solution: 1886660766.9055195
+2024-09-20 23:04:41,359 - Solving Seed-8677 - Removed 4338 servers with total gain 27227550.2164011
+2024-09-20 23:04:41,362 - Solving Seed-8677 - New best solution: 1961841080.1433353
+2024-09-20 23:04:50,641 - Solving Seed-2521 - Merged 26 servers with total gain 219586.40876412392
+2024-09-20 23:04:50,814 - Solving Seed-2521 - New best solution: 1643391475.8958602
+2024-09-20 23:05:02,966 - Solving Seed-6829 - Added 2954 servers with total gain 4850305.828758478
+2024-09-20 23:05:02,967 - Solving Seed-6829 - New best solution: 1729729248.0355353
+2024-09-20 23:05:14,714 - Solving Seed-5351 - Added 1708 servers with total gain 2884653.3432102203
+2024-09-20 23:05:14,714 - Solving Seed-5351 - New best solution: 1889545420.2487297
+2024-09-20 23:05:17,391 - Solving Seed-2381 - Removed 1283 servers with total gain 7866505.039032459
+2024-09-20 23:05:17,393 - Solving Seed-2381 - New best solution: 2209024581.284797
+2024-09-20 23:05:18,710 - Solving Seed-6829 - Merged 14 servers with total gain 508179.30168890953
+2024-09-20 23:05:18,911 - Solving Seed-6829 - New best solution: 1730237427.3372242
+2024-09-20 23:05:23,697 - Solving Seed-8677 - Added 4615 servers with total gain 9215747.981535912
+2024-09-20 23:05:23,697 - Solving Seed-8677 - New best solution: 1971056828.1248713
+2024-09-20 23:05:25,267 - Solving Seed-5351 - Merged 49 servers with total gain 719627.3743348122
+2024-09-20 23:05:25,438 - Solving Seed-5351 - New best solution: 1890265047.6230645
+2024-09-20 23:05:52,687 - Solving Seed-8677 - Merged 105 servers with total gain 1562984.9797992706
+2024-09-20 23:05:52,883 - Solving Seed-8677 - New best solution: 1972619813.1046705
+2024-09-20 23:05:53,936 - Solving Seed-9221 - Removed 2391 servers with total gain 20161522.002336502
+2024-09-20 23:05:53,938 - Solving Seed-9221 - New best solution: 1976823157.1913176
+2024-09-20 23:05:58,656 - Solving Seed-2381 - Added 1246 servers with total gain 2688766.8764629364
+2024-09-20 23:05:58,657 - Solving Seed-2381 - New best solution: 2211713348.16126
+2024-09-20 23:06:05,913 - Solving Seed-2381 - Merged 18 servers with total gain 98225.69375705719
+2024-09-20 23:06:06,071 - Solving Seed-2381 - New best solution: 2211811573.855017
+2024-09-20 23:06:09,367 - Solving Seed-9859 - Removed 2721 servers with total gain 17839706.953873634
+2024-09-20 23:06:09,373 - Solving Seed-9859 - New best solution: 2275260871.0855417
+2024-09-20 23:06:31,568 - Solving Seed-1097 - Removed 2913 servers with total gain 15118711.446573973
+2024-09-20 23:06:31,571 - Solving Seed-1097 - New best solution: 1972797934.5152326
+2024-09-20 23:06:41,319 - Solving Seed-9221 - Added 2390 servers with total gain 6874991.144417763
+2024-09-20 23:06:41,319 - Solving Seed-9221 - New best solution: 1983698148.3357353
+2024-09-20 23:06:46,364 - Solving Seed-8053 - Removed 1796 servers with total gain 12907010.433591366
+2024-09-20 23:06:46,367 - Solving Seed-8053 - New best solution: 2161572153.160827
+2024-09-20 23:06:48,161 - Solving Seed-9859 - Added 2813 servers with total gain 5470967.589462757
+2024-09-20 23:06:48,161 - Solving Seed-9859 - New best solution: 2280731838.6750045
+2024-09-20 23:06:56,229 - Solving Seed-9221 - Merged 27 servers with total gain 56542.1684346199
+2024-09-20 23:06:56,491 - Solving Seed-9221 - New best solution: 1983754690.50417
+2024-09-20 23:07:02,788 - Solving Seed-9859 - Merged 7 servers with total gain 196400.08116054535
+2024-09-20 23:07:03,000 - Solving Seed-9859 - New best solution: 2280928238.756165
+2024-09-20 23:07:13,132 - Solving Seed-1097 - Added 2915 servers with total gain 4432417.490638256
+2024-09-20 23:07:13,133 - Solving Seed-1097 - New best solution: 1977230352.0058708
+2024-09-20 23:07:27,509 - Solving Seed-6047 - Removed 2771 servers with total gain 15829325.99128294
+2024-09-20 23:07:27,512 - Solving Seed-6047 - New best solution: 1975281717.4226396
+2024-09-20 23:07:27,845 - Solving Seed-8053 - Added 1831 servers with total gain 4179788.246737957
+2024-09-20 23:07:27,845 - Solving Seed-8053 - New best solution: 2165751941.407565
+2024-09-20 23:07:29,613 - Solving Seed-1097 - Merged 18 servers with total gain 137076.231051445
+2024-09-20 23:07:29,699 - Solving Seed-5351 - Removed 1603 servers with total gain 7100200.617490768
+2024-09-20 23:07:29,702 - Solving Seed-5351 - New best solution: 1897365248.2405553
+2024-09-20 23:07:29,852 - Solving Seed-1097 - New best solution: 1977367428.2369223
+2024-09-20 23:07:42,214 - Solving Seed-8053 - Merged 71 servers with total gain 639797.7216968536
+2024-09-20 23:07:42,470 - Solving Seed-8053 - New best solution: 2166391739.129262
+2024-09-20 23:07:43,780 - Solving Seed-2521 - Removed 2717 servers with total gain 13814082.00301981
+2024-09-20 23:07:43,782 - Solving Seed-2521 - New best solution: 1657205557.89888
+2024-09-20 23:08:07,354 - Solving Seed-6047 - Added 2741 servers with total gain 5837649.698222876
+2024-09-20 23:08:07,354 - Solving Seed-6047 - New best solution: 1981119367.1208625
+2024-09-20 23:08:07,861 - Solving Seed-5351 - Added 1580 servers with total gain 2735944.394931555
+2024-09-20 23:08:07,862 - Solving Seed-5351 - New best solution: 1900101192.6354868
+2024-09-20 23:08:18,165 - Solving Seed-2381 - Removed 1217 servers with total gain 6845193.578217983
+2024-09-20 23:08:18,168 - Solving Seed-2381 - New best solution: 2218656767.433235
+2024-09-20 23:08:18,830 - Solving Seed-5351 - Merged 29 servers with total gain 419230.97857165337
+2024-09-20 23:08:18,986 - Solving Seed-5351 - New best solution: 1900520423.6140585
+2024-09-20 23:08:22,077 - Solving Seed-6047 - Merged 12 servers with total gain 273888.4496691227
+2024-09-20 23:08:22,318 - Solving Seed-6047 - New best solution: 1981393255.5705316
+2024-09-20 23:08:23,323 - Solving Seed-2521 - Added 2781 servers with total gain 4411794.231930971
+2024-09-20 23:08:23,324 - Solving Seed-2521 - New best solution: 1661617352.130811
+2024-09-20 23:08:40,476 - Solving Seed-6829 - Removed 2401 servers with total gain 15344458.327650785
+2024-09-20 23:08:40,479 - Solving Seed-6829 - New best solution: 1745581885.664875
+2024-09-20 23:08:45,156 - Solving Seed-2521 - Merged 8 servers with total gain 178473.63723802567
+2024-09-20 23:08:45,368 - Solving Seed-2521 - New best solution: 1661795825.768049
+2024-09-20 23:08:58,037 - Solving Seed-2381 - Added 1230 servers with total gain 2828017.958454609
+2024-09-20 23:08:58,038 - Solving Seed-2381 - New best solution: 2221484785.39169
+2024-09-20 23:09:06,618 - Solving Seed-2381 - Merged 11 servers with total gain 71069.57640743256
+2024-09-20 23:09:06,781 - Solving Seed-2381 - New best solution: 2221555854.968097
+2024-09-20 23:09:16,805 - Solving Seed-6829 - Added 2460 servers with total gain 4684951.956956863
+2024-09-20 23:09:16,805 - Solving Seed-6829 - New best solution: 1750266837.621832
+2024-09-20 23:09:34,887 - Solving Seed-6829 - Merged 10 servers with total gain 333215.77539014816
+2024-09-20 23:09:35,149 - Solving Seed-6829 - New best solution: 1750600053.397222
+2024-09-20 23:09:52,046 - Solving Seed-9221 - Removed 2056 servers with total gain 16468045.936091423
+2024-09-20 23:09:52,048 - Solving Seed-9221 - New best solution: 2000222736.4402614
+2024-09-20 23:10:24,032 - Solving Seed-5351 - Removed 1278 servers with total gain 6638852.2599282265
+2024-09-20 23:10:24,034 - Solving Seed-5351 - New best solution: 1907159275.8739867
+2024-09-20 23:10:27,261 - Solving Seed-8677 - Removed 3837 servers with total gain 23498531.55965686
+2024-09-20 23:10:27,264 - Solving Seed-8677 - New best solution: 1996118344.6643274
+2024-09-20 23:10:35,487 - Solving Seed-1097 - Removed 2430 servers with total gain 11766811.54991746
+2024-09-20 23:10:35,489 - Solving Seed-1097 - New best solution: 1989134239.7868397
+2024-09-20 23:10:36,441 - Solving Seed-9221 - Added 2073 servers with total gain 5516132.8687644005
+2024-09-20 23:10:36,441 - Solving Seed-9221 - New best solution: 2005738869.3090258
+2024-09-20 23:10:36,588 - Solving Seed-8053 - Removed 1632 servers with total gain 11699956.101727486
+2024-09-20 23:10:36,591 - Solving Seed-8053 - New best solution: 2178091695.2309895
+2024-09-20 23:10:36,691 - Solving Seed-9859 - Removed 2346 servers with total gain 13843059.251437187
+2024-09-20 23:10:36,694 - Solving Seed-9859 - New best solution: 2294771298.007602
+2024-09-20 23:10:50,065 - Solving Seed-9221 - Merged 47 servers with total gain 77307.12534618378
+2024-09-20 23:10:50,236 - Solving Seed-9221 - New best solution: 2005816176.434372
+2024-09-20 23:11:02,056 - Solving Seed-5351 - Added 1257 servers with total gain 2607773.3187351227
+2024-09-20 23:11:02,056 - Solving Seed-5351 - New best solution: 1909767049.1927218
+2024-09-20 23:11:08,086 - Solving Seed-8677 - Added 3861 servers with total gain 8040366.200781584
+2024-09-20 23:11:08,086 - Solving Seed-8677 - New best solution: 2004158710.865109
+2024-09-20 23:11:08,701 - Solving Seed-2381 - Removed 1152 servers with total gain 6621803.692107201
+2024-09-20 23:11:08,704 - Solving Seed-2381 - New best solution: 2228177658.6602044
+2024-09-20 23:11:12,321 - Solving Seed-5351 - Merged 13 servers with total gain 218388.10725450516
+2024-09-20 23:11:12,491 - Solving Seed-5351 - New best solution: 1909985437.2999763
+2024-09-20 23:11:14,559 - Solving Seed-9859 - Added 2534 servers with total gain 4301530.9697265625
+2024-09-20 23:11:14,559 - Solving Seed-9859 - New best solution: 2299072828.977329
+2024-09-20 23:11:16,004 - Solving Seed-8053 - Added 1648 servers with total gain 3673971.6390042305
+2024-09-20 23:11:16,004 - Solving Seed-8053 - New best solution: 2181765666.8699937
+2024-09-20 23:11:16,511 - Solving Seed-1097 - Added 2520 servers with total gain 3701733.111309767
+2024-09-20 23:11:16,512 - Solving Seed-1097 - New best solution: 1992835972.8981495
+2024-09-20 23:11:32,161 - Solving Seed-9859 - Merged 17 servers with total gain 347107.06386756897
+2024-09-20 23:11:32,358 - Solving Seed-9859 - New best solution: 2299419936.0411963
+2024-09-20 23:11:32,544 - Solving Seed-8053 - Merged 10 servers with total gain 114519.49133443832
+2024-09-20 23:11:32,786 - Solving Seed-8053 - New best solution: 2181880186.361328
+2024-09-20 23:11:38,105 - Solving Seed-1097 - Merged 5 servers with total gain 368298.7742381096
+2024-09-20 23:11:38,303 - Solving Seed-1097 - New best solution: 1993204271.6723876
+2024-09-20 23:11:40,871 - Solving Seed-8677 - Merged 79 servers with total gain 592752.2915079594
+2024-09-20 23:11:41,121 - Solving Seed-8677 - New best solution: 2004751463.156617
+2024-09-20 23:11:41,123 - Solving Seed-2521 - Removed 2402 servers with total gain 10763500.183780909
+2024-09-20 23:11:41,126 - Solving Seed-2521 - New best solution: 1672559325.95183
+2024-09-20 23:11:44,054 - Solving Seed-6047 - Removed 2383 servers with total gain 11246365.2041471
+2024-09-20 23:11:44,057 - Solving Seed-6047 - New best solution: 1992639620.7746787
+2024-09-20 23:11:46,697 - Solving Seed-6047 - Optimized selling prices with gain 2041109.2449991703
+2024-09-20 23:11:46,698 - Solving Seed-6047 - New best solution: 1994680730.0196779
+2024-09-20 23:11:51,144 - Solving Seed-2381 - Added 1139 servers with total gain 2060073.7643356323
+2024-09-20 23:11:51,144 - Solving Seed-2381 - New best solution: 2230237732.42454
+2024-09-20 23:11:57,823 - Solving Seed-2381 - Merged 4 servers with total gain 21546.70628261566
+2024-09-20 23:11:57,993 - Solving Seed-2381 - New best solution: 2230259279.1308227
+2024-09-20 23:12:20,910 - Solving Seed-2521 - Added 2398 servers with total gain 3745673.730998516
+2024-09-20 23:12:20,910 - Solving Seed-2521 - New best solution: 1676304999.6828284
+2024-09-20 23:12:28,383 - Solving Seed-6047 - Added 1030 servers with total gain 2612054.736415148
+2024-09-20 23:12:28,383 - Solving Seed-6047 - New best solution: 1997292784.756093
+2024-09-20 23:12:43,149 - Solving Seed-6047 - Merged 9 servers with total gain 323580.9833986759
+2024-09-20 23:12:43,349 - Solving Seed-6047 - New best solution: 1997616365.7394917
+2024-09-20 23:12:45,817 - Solving Seed-2521 - Merged 5 servers with total gain 172949.48995995522
+2024-09-20 23:12:46,008 - Solving Seed-2521 - New best solution: 1676477949.1727884
+2024-09-20 23:12:54,028 - Solving Seed-6829 - Removed 1975 servers with total gain 12074796.589671612
+2024-09-20 23:12:54,031 - Solving Seed-6829 - New best solution: 1762674849.9868937
+2024-09-20 23:13:12,523 - Solving Seed-5351 - Removed 1064 servers with total gain 6093494.09942317
+2024-09-20 23:13:12,525 - Solving Seed-5351 - New best solution: 1916078931.3993995
+2024-09-20 23:13:29,282 - Solving Seed-6829 - Added 2050 servers with total gain 4276406.422064781
+2024-09-20 23:13:29,282 - Solving Seed-6829 - New best solution: 1766951256.4089584
+2024-09-20 23:13:33,510 - Solving Seed-9221 - Removed 1799 servers with total gain 10920397.559851408
+2024-09-20 23:13:33,513 - Solving Seed-9221 - New best solution: 2016736573.9942234
+2024-09-20 23:13:46,369 - Solving Seed-6829 - Merged 11 servers with total gain 493543.5387187004
+2024-09-20 23:13:46,624 - Solving Seed-6829 - New best solution: 1767444799.9476771
+2024-09-20 23:13:51,045 - Solving Seed-5351 - Added 1066 servers with total gain 3283104.159355879
+2024-09-20 23:13:51,046 - Solving Seed-5351 - New best solution: 1919362035.5587554
+2024-09-20 23:14:00,835 - Solving Seed-5351 - Merged 10 servers with total gain 206934.555185318
+2024-09-20 23:14:00,972 - Solving Seed-5351 - New best solution: 1919568970.1139407
+2024-09-20 23:14:01,105 - Solving Seed-2381 - Removed 1079 servers with total gain 5717403.038906574
+2024-09-20 23:14:01,108 - Solving Seed-2381 - New best solution: 2235976682.169729
+2024-09-20 23:14:15,510 - Solving Seed-8053 - Removed 1525 servers with total gain 10694778.845962048
+2024-09-20 23:14:15,514 - Solving Seed-8053 - New best solution: 2192574965.20729
+2024-09-20 23:14:18,678 - Solving Seed-9221 - Added 1805 servers with total gain 4273023.598979235
+2024-09-20 23:14:18,678 - Solving Seed-9221 - New best solution: 2021009597.5932026
+2024-09-20 23:14:32,334 - Solving Seed-9221 - Merged 68 servers with total gain 175111.83689785004
+2024-09-20 23:14:32,553 - Solving Seed-9221 - New best solution: 2021184709.4301004
+2024-09-20 23:14:32,894 - Solving Seed-1097 - Removed 2153 servers with total gain 10177098.398623943
+2024-09-20 23:14:32,897 - Solving Seed-1097 - New best solution: 2003381370.0710115
+2024-09-20 23:14:41,394 - Solving Seed-2381 - Added 1057 servers with total gain 1840196.4499173164
+2024-09-20 23:14:41,394 - Solving Seed-2381 - New best solution: 2237816878.6196465
+2024-09-20 23:14:48,214 - Solving Seed-2381 - Merged 4 servers with total gain 28166.65930366516
+2024-09-20 23:14:48,390 - Solving Seed-2381 - New best solution: 2237845045.27895
+2024-09-20 23:14:54,981 - Solving Seed-8053 - Added 1524 servers with total gain 3452907.591878891
+2024-09-20 23:14:54,982 - Solving Seed-8053 - New best solution: 2196027872.799169
+2024-09-20 23:14:57,355 - Solving Seed-9859 - Removed 2193 servers with total gain 11327865.346107006
+2024-09-20 23:14:57,358 - Solving Seed-9859 - New best solution: 2310747801.3873034
+2024-09-20 23:15:07,155 - Solving Seed-8053 - Merged 9 servers with total gain 54466.94707632065
+2024-09-20 23:15:07,307 - Solving Seed-8053 - New best solution: 2196082339.7462454
+2024-09-20 23:15:13,462 - Solving Seed-1097 - Added 2232 servers with total gain 3206981.558868408
+2024-09-20 23:15:13,463 - Solving Seed-1097 - New best solution: 2006588351.62988
+2024-09-20 23:15:29,977 - Solving Seed-6047 - Removed 3098 servers with total gain 41687482.14246464
+2024-09-20 23:15:29,980 - Solving Seed-6047 - New best solution: 2039303847.8819563
+2024-09-20 23:15:30,467 - Solving Seed-1097 - Merged 30 servers with total gain 397592.4998393059
+2024-09-20 23:15:30,735 - Solving Seed-1097 - New best solution: 2006985944.1297193
+2024-09-20 23:15:30,789 - Solving Seed-2521 - Removed 2077 servers with total gain 9947337.321306229
+2024-09-20 23:15:30,792 - Solving Seed-2521 - New best solution: 1686425286.4940946
+2024-09-20 23:15:35,625 - Solving Seed-9859 - Added 2320 servers with total gain 3895497.9261345863
+2024-09-20 23:15:35,625 - Solving Seed-9859 - New best solution: 2314643299.313438
+2024-09-20 23:15:47,891 - Solving Seed-8677 - Removed 3423 servers with total gain 19422615.46350932
+2024-09-20 23:15:47,893 - Solving Seed-8677 - New best solution: 2024174078.6201262
+2024-09-20 23:15:50,112 - Solving Seed-9859 - Merged 16 servers with total gain 292502.893078804
+2024-09-20 23:15:50,316 - Solving Seed-9859 - New best solution: 2314935802.2065167
+2024-09-20 23:15:58,419 - Solving Seed-5351 - Removed 899 servers with total gain 5128145.031537533
+2024-09-20 23:15:58,425 - Solving Seed-5351 - New best solution: 1924697115.1454782
+2024-09-20 23:16:11,900 - Solving Seed-6047 - Added 1590 servers with total gain 3014301.093109131
+2024-09-20 23:16:11,900 - Solving Seed-6047 - New best solution: 2042318148.9750655
+2024-09-20 23:16:13,333 - Solving Seed-2521 - Added 2137 servers with total gain 2901553.167500019
+2024-09-20 23:16:13,334 - Solving Seed-2521 - New best solution: 1689326839.6615946
+2024-09-20 23:16:26,932 - Solving Seed-6047 - Merged 50 servers with total gain 936514.7453944683
+2024-09-20 23:16:27,110 - Solving Seed-6047 - New best solution: 2043254663.72046
+2024-09-20 23:16:29,711 - Solving Seed-8677 - Added 3488 servers with total gain 7499817.844343185
+2024-09-20 23:16:29,712 - Solving Seed-8677 - New best solution: 2031673896.4644694
+2024-09-20 23:16:38,611 - Solving Seed-2521 - Merged 4 servers with total gain 336220.7556295395
+2024-09-20 23:16:38,862 - Solving Seed-2521 - New best solution: 1689663060.4172242
+2024-09-20 23:16:38,985 - Solving Seed-5351 - Added 930 servers with total gain 2299113.888281822
+2024-09-20 23:16:38,985 - Solving Seed-5351 - New best solution: 1926996229.03376
+2024-09-20 23:16:50,196 - Solving Seed-5351 - Merged 14 servers with total gain 437104.6542043686
+2024-09-20 23:16:50,355 - Solving Seed-5351 - New best solution: 1927433333.6879644
+2024-09-20 23:16:58,341 - Solving Seed-2381 - Removed 1029 servers with total gain 5090922.334436893
+2024-09-20 23:16:58,344 - Solving Seed-2381 - New best solution: 2242935967.613387
+2024-09-20 23:16:59,984 - Solving Seed-8677 - Merged 62 servers with total gain 1138749.9023270607
+2024-09-20 23:17:00,249 - Solving Seed-8677 - New best solution: 2032812646.3667965
+2024-09-20 23:17:03,514 - Solving Seed-6829 - Removed 1717 servers with total gain 9875098.891861439
+2024-09-20 23:17:03,516 - Solving Seed-6829 - New best solution: 1777319898.8395386
+2024-09-20 23:17:16,767 - Solving Seed-9221 - Removed 1622 servers with total gain 8888831.14255619
+2024-09-20 23:17:16,769 - Solving Seed-9221 - New best solution: 2030073540.5726566
+2024-09-20 23:17:35,810 - Solving Seed-2381 - Added 1006 servers with total gain 1829943.5041441917
+2024-09-20 23:17:35,810 - Solving Seed-2381 - New best solution: 2244765911.1175313
+2024-09-20 23:17:39,390 - Solving Seed-6829 - Added 1711 servers with total gain 3336578.897347927
+2024-09-20 23:17:39,391 - Solving Seed-6829 - New best solution: 1780656477.7368865
+2024-09-20 23:17:43,651 - Solving Seed-2381 - Merged 3 servers with total gain 20966.86004638672
+2024-09-20 23:17:43,859 - Solving Seed-2381 - New best solution: 2244786877.9775777
+2024-09-20 23:17:56,209 - Solving Seed-8053 - Removed 1381 servers with total gain 9378393.278621674
+2024-09-20 23:17:56,213 - Solving Seed-8053 - New best solution: 2205460733.024867
+2024-09-20 23:17:58,171 - Solving Seed-6829 - Merged 5 servers with total gain 99255.93434524536
+2024-09-20 23:17:58,362 - Solving Seed-6829 - New best solution: 1780755733.6712317
+2024-09-20 23:18:01,285 - Solving Seed-9221 - Added 1675 servers with total gain 3871314.3611745834
+2024-09-20 23:18:01,285 - Solving Seed-9221 - New best solution: 2033944854.9338312
+2024-09-20 23:18:16,768 - Solving Seed-9221 - Merged 94 servers with total gain 214301.1179344654
+2024-09-20 23:18:16,924 - Solving Seed-9221 - New best solution: 2034159156.0517657
+2024-09-20 23:18:35,102 - Solving Seed-1097 - Removed 1814 servers with total gain 8336884.215793133
+2024-09-20 23:18:35,104 - Solving Seed-1097 - New best solution: 2015322828.3455124
+2024-09-20 23:18:36,651 - Solving Seed-8053 - Added 1391 servers with total gain 3092315.9013137817
+2024-09-20 23:18:36,652 - Solving Seed-8053 - New best solution: 2208553048.926181
+2024-09-20 23:18:51,253 - Solving Seed-5351 - Removed 720 servers with total gain 4090599.133708954
+2024-09-20 23:18:51,256 - Solving Seed-5351 - New best solution: 1931523932.8216734
+2024-09-20 23:18:51,873 - Solving Seed-8053 - Merged 14 servers with total gain 76019.19019508362
+2024-09-20 23:18:52,126 - Solving Seed-8053 - New best solution: 2208629068.116376
+2024-09-20 23:19:07,554 - Solving Seed-6047 - Removed 1421 servers with total gain 7499452.138790369
+2024-09-20 23:19:07,557 - Solving Seed-6047 - New best solution: 2050754115.8592503
+2024-09-20 23:19:17,835 - Solving Seed-1097 - Added 1817 servers with total gain 2883018.6464505196
+2024-09-20 23:19:17,835 - Solving Seed-1097 - New best solution: 2018205846.991963
+2024-09-20 23:19:28,099 - Solving Seed-9859 - Removed 1748 servers with total gain 9844243.327726841
+2024-09-20 23:19:28,102 - Solving Seed-9859 - New best solution: 2324780045.5342436
+2024-09-20 23:19:31,321 - Solving Seed-5351 - Added 716 servers with total gain 1860620.940136671
+2024-09-20 23:19:31,322 - Solving Seed-5351 - New best solution: 1933384553.76181
+2024-09-20 23:19:36,940 - Solving Seed-1097 - Merged 37 servers with total gain 510723.90958738327
+2024-09-20 23:19:37,096 - Solving Seed-1097 - New best solution: 2018716570.9015503
+2024-09-20 23:19:42,020 - Solving Seed-2521 - Removed 1865 servers with total gain 7878907.32362175
+2024-09-20 23:19:42,023 - Solving Seed-2521 - New best solution: 1697541967.740846
+2024-09-20 23:19:42,295 - Solving Seed-5351 - Merged 12 servers with total gain 474051.6661219597
+2024-09-20 23:19:42,417 - Solving Seed-5351 - New best solution: 1933858605.427932
+2024-09-20 23:19:49,592 - Solving Seed-6047 - Added 1354 servers with total gain 2487822.6048641205
+2024-09-20 23:19:49,593 - Solving Seed-6047 - New best solution: 2053241938.4641144
+2024-09-20 23:19:57,368 - Solving Seed-2381 - Removed 1027 servers with total gain 4962601.04932642
+2024-09-20 23:19:57,371 - Solving Seed-2381 - New best solution: 2249749479.026904
+2024-09-20 23:20:03,027 - Solving Seed-6047 - Merged 58 servers with total gain 983884.619653225
+2024-09-20 23:20:03,212 - Solving Seed-6047 - New best solution: 2054225823.0837677
+2024-09-20 23:20:07,515 - Solving Seed-9859 - Added 1913 servers with total gain 3460530.197587967
+2024-09-20 23:20:07,515 - Solving Seed-9859 - New best solution: 2328240575.7318316
+2024-09-20 23:20:22,910 - Solving Seed-9859 - Merged 34 servers with total gain 483358.1253108978
+2024-09-20 23:20:23,141 - Solving Seed-9859 - New best solution: 2328723933.8571424
+2024-09-20 23:20:23,669 - Solving Seed-2521 - Added 1911 servers with total gain 2623963.506055355
+2024-09-20 23:20:23,669 - Solving Seed-2521 - New best solution: 1700165931.2469013
+2024-09-20 23:20:36,205 - Solving Seed-2381 - Added 1020 servers with total gain 1789616.1575779915
+2024-09-20 23:20:36,205 - Solving Seed-2381 - New best solution: 2251539095.184482
+2024-09-20 23:20:43,968 - Solving Seed-2381 - Merged 3 servers with total gain 26011.922771930695
+2024-09-20 23:20:44,130 - Solving Seed-2381 - New best solution: 2251565107.107254
+2024-09-20 23:20:48,992 - Solving Seed-2521 - Merged 4 servers with total gain 325492.7610244751
+2024-09-20 23:20:49,161 - Solving Seed-2521 - New best solution: 1700491424.0079257
+2024-09-20 23:21:14,035 - Solving Seed-9221 - Removed 1566 servers with total gain 6849579.246213198
+2024-09-20 23:21:14,038 - Solving Seed-9221 - New best solution: 2041008735.2979789
+2024-09-20 23:21:26,000 - Solving Seed-8677 - Removed 2695 servers with total gain 17444346.32114935
+2024-09-20 23:21:26,002 - Solving Seed-8677 - New best solution: 2050256992.6879458
+2024-09-20 23:21:27,103 - Solving Seed-6829 - Removed 1546 servers with total gain 8103661.023401737
+2024-09-20 23:21:27,106 - Solving Seed-6829 - New best solution: 1788859394.6946335
+2024-09-20 23:21:43,221 - Solving Seed-5351 - Removed 699 servers with total gain 4063292.4177906513
+2024-09-20 23:21:43,223 - Solving Seed-5351 - New best solution: 1937921897.8457227
+2024-09-20 23:21:49,721 - Solving Seed-8053 - Removed 1267 servers with total gain 8329465.310069084
+2024-09-20 23:21:49,726 - Solving Seed-8053 - New best solution: 2216958533.426445
+2024-09-20 23:21:59,772 - Solving Seed-9221 - Added 1510 servers with total gain 3232668.8564162254
+2024-09-20 23:21:59,773 - Solving Seed-9221 - New best solution: 2044241404.154395
+2024-09-20 23:22:06,511 - Solving Seed-6829 - Added 1555 servers with total gain 3071762.916580677
+2024-09-20 23:22:06,512 - Solving Seed-6829 - New best solution: 1791931157.6112142
+2024-09-20 23:22:07,762 - Solving Seed-8677 - Added 2725 servers with total gain 6844590.701785564
+2024-09-20 23:22:07,762 - Solving Seed-8677 - New best solution: 2057101583.3897314
+2024-09-20 23:22:13,953 - Solving Seed-9221 - Merged 2 servers with total gain 66812.6778588295
+2024-09-20 23:22:14,165 - Solving Seed-9221 - New best solution: 2044308216.832254
+2024-09-20 23:22:26,207 - Solving Seed-5351 - Added 708 servers with total gain 1970191.145900488
+2024-09-20 23:22:26,208 - Solving Seed-5351 - New best solution: 1939892088.9916232
+2024-09-20 23:22:28,258 - Solving Seed-6829 - Merged 8 servers with total gain 412156.3606529236
+2024-09-20 23:22:28,543 - Solving Seed-6829 - New best solution: 1792343313.971867
+2024-09-20 23:22:33,085 - Solving Seed-8053 - Added 1294 servers with total gain 2786438.7290205956
+2024-09-20 23:22:33,086 - Solving Seed-8053 - New best solution: 2219744972.1554656
+2024-09-20 23:22:38,263 - Solving Seed-8677 - Merged 47 servers with total gain 598176.6759297848
+2024-09-20 23:22:38,532 - Solving Seed-8677 - New best solution: 2057699760.0656612
+2024-09-20 23:22:39,045 - Solving Seed-5351 - Merged 8 servers with total gain 204988.3583137989
+2024-09-20 23:22:39,205 - Solving Seed-5351 - New best solution: 1940097077.349937
+2024-09-20 23:22:47,800 - Solving Seed-6047 - Removed 1258 servers with total gain 6396185.879925728
+2024-09-20 23:22:47,803 - Solving Seed-6047 - New best solution: 2060622008.9636934
+2024-09-20 23:22:48,326 - Solving Seed-8053 - Merged 22 servers with total gain 140096.49782133102
+2024-09-20 23:22:48,525 - Solving Seed-8053 - New best solution: 2219885068.653287
+2024-09-20 23:22:54,395 - Solving Seed-1097 - Removed 1611 servers with total gain 8165470.610690355
+2024-09-20 23:22:54,398 - Solving Seed-1097 - New best solution: 2026882041.5122406
+2024-09-20 23:23:01,468 - Solving Seed-2381 - Removed 1025 servers with total gain 4534604.099443436
+2024-09-20 23:23:01,470 - Solving Seed-2381 - New best solution: 2256099711.2066975
+2024-09-20 23:23:29,592 - Solving Seed-6047 - Added 1260 servers with total gain 2392798.611572504
+2024-09-20 23:23:29,593 - Solving Seed-6047 - New best solution: 2063014807.575266
+2024-09-20 23:23:36,545 - Solving Seed-1097 - Added 1602 servers with total gain 2742100.750415802
+2024-09-20 23:23:36,546 - Solving Seed-1097 - New best solution: 2029624142.2626565
+2024-09-20 23:23:40,593 - Solving Seed-2381 - Added 1018 servers with total gain 1628831.8235311508
+2024-09-20 23:23:40,594 - Solving Seed-2381 - New best solution: 2257728543.0302286
+2024-09-20 23:23:44,986 - Solving Seed-6047 - Merged 55 servers with total gain 1078259.9683146477
+2024-09-20 23:23:45,193 - Solving Seed-6047 - New best solution: 2064093067.5435805
+2024-09-20 23:23:48,881 - Solving Seed-2381 - Merged 4 servers with total gain 28967.854283809662
+2024-09-20 23:23:49,024 - Solving Seed-2381 - New best solution: 2257757510.8845124
+2024-09-20 23:23:56,482 - Solving Seed-1097 - Merged 31 servers with total gain 324842.8007414341
+2024-09-20 23:23:56,722 - Solving Seed-1097 - New best solution: 2029948985.063398
+2024-09-20 23:23:57,703 - Solving Seed-2521 - Removed 1636 servers with total gain 7596320.294045925
+2024-09-20 23:23:57,707 - Solving Seed-2521 - New best solution: 1708087744.3019717
+2024-09-20 23:24:18,580 - Solving Seed-9859 - Removed 1653 servers with total gain 7817010.950544834
+2024-09-20 23:24:18,582 - Solving Seed-9859 - New best solution: 2336540944.8076873
+2024-09-20 23:24:37,988 - Solving Seed-2521 - Added 1671 servers with total gain 2404781.239057541
+2024-09-20 23:24:37,988 - Solving Seed-2521 - New best solution: 1710492525.5410292
+2024-09-20 23:24:45,974 - Solving Seed-5351 - Removed 663 servers with total gain 3327910.4766049385
+2024-09-20 23:24:45,977 - Solving Seed-5351 - New best solution: 1943424987.826542
+2024-09-20 23:24:57,059 - Solving Seed-9859 - Added 1828 servers with total gain 2827932.831791401
+2024-09-20 23:24:57,060 - Solving Seed-9859 - New best solution: 2339368877.6394787
+2024-09-20 23:25:03,161 - Solving Seed-2521 - Merged 7 servers with total gain 235035.90187215805
+2024-09-20 23:25:03,381 - Solving Seed-2521 - New best solution: 1710727561.4429014
+2024-09-20 23:25:12,089 - Solving Seed-9859 - Merged 6 servers with total gain 87337.5226430893
+2024-09-20 23:25:12,283 - Solving Seed-9859 - New best solution: 2339456215.162122
+2024-09-20 23:25:16,174 - Solving Seed-9221 - Removed 1143 servers with total gain 5298881.65529561
+2024-09-20 23:25:16,177 - Solving Seed-9221 - New best solution: 2049607098.4875495
+2024-09-20 23:25:26,054 - Solving Seed-5351 - Added 713 servers with total gain 1371240.7400856018
+2024-09-20 23:25:26,055 - Solving Seed-5351 - New best solution: 1944796228.5666275
+2024-09-20 23:25:37,239 - Solving Seed-5351 - Merged 11 servers with total gain 423000.675280571
+2024-09-20 23:25:37,389 - Solving Seed-5351 - New best solution: 1945219229.241908
+2024-09-20 23:25:55,735 - Solving Seed-8053 - Removed 1223 servers with total gain 7759502.367166996
+2024-09-20 23:25:55,738 - Solving Seed-8053 - New best solution: 2227644571.020454
+2024-09-20 23:26:01,177 - Solving Seed-9221 - Added 1087 servers with total gain 2318719.0026824474
+2024-09-20 23:26:01,178 - Solving Seed-9221 - New best solution: 2051925817.490232
+2024-09-20 23:26:03,294 - Solving Seed-2381 - Removed 997 servers with total gain 4553085.306697369
+2024-09-20 23:26:03,297 - Solving Seed-2381 - New best solution: 2262310596.19121
+2024-09-20 23:26:04,062 - Solving Seed-6829 - Removed 1368 servers with total gain 7299030.764261246
+2024-09-20 23:26:04,065 - Solving Seed-6829 - New best solution: 1799642344.7361283
+2024-09-20 23:26:14,728 - Solving Seed-9221 - Merged 4 servers with total gain 8637.182082653046
+2024-09-20 23:26:14,905 - Solving Seed-9221 - New best solution: 2051934454.6723146
+2024-09-20 23:26:27,495 - Solving Seed-6047 - Removed 1149 servers with total gain 4862702.040087223
+2024-09-20 23:26:27,498 - Solving Seed-6047 - New best solution: 2068955769.5836678
+2024-09-20 23:26:38,706 - Solving Seed-8053 - Added 1222 servers with total gain 2417055.7298026085
+2024-09-20 23:26:38,707 - Solving Seed-8053 - New best solution: 2230061626.7502565
+2024-09-20 23:26:40,942 - Solving Seed-6829 - Added 1380 servers with total gain 2739531.442425251
+2024-09-20 23:26:40,943 - Solving Seed-6829 - New best solution: 1802381876.1785536
+2024-09-20 23:26:42,391 - Solving Seed-2381 - Added 996 servers with total gain 1677164.0929756165
+2024-09-20 23:26:42,392 - Solving Seed-2381 - New best solution: 2263987760.2841854
+2024-09-20 23:26:51,098 - Solving Seed-2381 - Merged 2 servers with total gain 13294.434382915497
+2024-09-20 23:26:51,286 - Solving Seed-2381 - New best solution: 2264001054.7185683
+2024-09-20 23:26:54,650 - Solving Seed-8053 - Merged 23 servers with total gain 178898.40967845917
+2024-09-20 23:26:54,953 - Solving Seed-8053 - New best solution: 2230240525.159935
